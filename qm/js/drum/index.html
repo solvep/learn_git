@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+     <audio data-key="65" src="./sounds/clap.wav"></audio> 
+     <audio data-key="66" src="./sounds/boom.wav" ></audio>
+     <audio data-key="67" src="./sounds/hihat.wav"></audio>
+     <audio data-key="68" src="./sounds/kick.wav"></audio>
+     <audio data-key="69" src="./sounds/openhat.wav"></audio>
+     <audio data-key="70" src="./sounds/ride.wav"></audio>
+     <audio data-key="71" src="./sounds/snare.wav"></audio>
+     <audio data-key="72" src="./sounds/tink.wav" id="audio_tink"></audio>
+     <audio data-key="73" src="./sounds/tom.wav"></audio>
+     <script>
+        //  dom编程
+        window.onload=function(){
+        // const audioClap = document.getElementById('audio_clap');
+        // audioClap.play();
+        // const audioTink = document.getElementById('audio_tink');
+        // audioTink.play();
+        // js 基于事件机制 按键事件
+        // const audioObj={
+        //     '65':document.getElementById('audio_clap'),
+        //     '186':document.getElementById('audio_tink'),
+        // }
+        function playSound(e){
+            console.log(e.keyCode);
+            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`) //字符串模板 
+            if(audio)
+            audio.play();
+            // if(audioObj[e.keyCode])
+            // audioObj[e.keyCode].play();
+        }
+   
+        window.addEventListener('keydown',playSound);
+ }
+        
+    //  h5 仿生应用
+    //  按相应的键发出相应的声音   
+    //  js 控制声音
+    //  1.autoplay ->js 播放声音
+    //  2.匹配按键 出相应的声音呢？
+     </script>
+</body>
+</html>
