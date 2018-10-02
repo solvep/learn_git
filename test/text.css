@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+.div_demo{
+
+	width:100px;
+	height:100px;
+	background-color:#06c;
+	margin: auto;
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+}
+

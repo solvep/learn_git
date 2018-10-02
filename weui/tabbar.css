@@ -1,0 +1,54 @@
+/* 
+   *author llj
+ 
+    date 18-10-1
+
+    功能  tabbar 组件
+
+*/
+
+.weui-tabbar{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    z-index: 500;
+    background-color: #ffffff;
+}
+
+.weui-tabbar_item{
+    flex: 1;
+    text-align: center;
+    /* 顺时针 找到对面的属性补上去 */
+    padding: 5px 0 0;
+    font-size: 0;
+    color: #808080;
+}
+.weui-tabbar_item>span{
+    display: inline-block;
+    position: relative;
+}
+.weui-tabbar_icon{
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+}
+.weui-badge{
+    position: absolute;
+    top: -2px;
+    right: -13;
+    min-width: 8px;
+    display:inline-block;
+    font-size: 12px;
+    line-height: 12px;
+    padding: .15em .4em;
+    background-color: #f43539;
+    border-radius: 18px;
+    color: white;
+}
+.weui-tabbar__label{
+    font-size: 10px;
+    color: #808080;
+    text-align: center;
+    line-height: 1.8;
+}
