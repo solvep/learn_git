@@ -1,4 +1,15 @@
 - css 命名规范   BEM
+Block
+    页面时由多个Block 构成的，跟其他的block区分开来，tabbar
+    Element__
+        在区块中负担的职责，取唯一性的名字
+          并不是简单的父子关系
+          __label
+          __icon
+        Modifier
+        状态的修改
+        __itme_n
+
 - WEUI
  微信ui规范，内嵌公众号，小程序，调起webview，
  为了让用户体验一致，让用户有认同感。
