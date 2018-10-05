@@ -2,32 +2,136 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
 <body>
-    <script>
-//         console.log('hello from javascript')
-//         // console.log(12 / 0);   //Infinity 无限的循环的
-//         // let a; //variable
+        <script>
+            (function() {
+
+var a = 10;
+var b = 20;
+
+var test = {
+    m: 20,
+    add: function(x) {
+        return a + x;
+    },
+    sum: function() {
+        return a + b + this.m;
+    },
+    mark: function(k, j) {
+        return k + j;
+    }
+}
+
+window.test = test;
+
+})();
+
+console.log(test.add(100));
+console.log(test.sum());
+console.log(test.mark());
+
+var _mark = test.mark;
+console.log(_mark());
+        //         var fn;
+        // function foo() {
+        //     var a = 2;
+        //     function baz() {
+        //         console.log( a );
+        //     }
+        //    fn = baz;
+        // }  
+       
+        // function bar() {
+        //     fn();
+        // }
         
-//         console.log(a);  //undefine 表示变量还未定义
-//         a=3.14;
-//         console.log(a); 
-//         console.log(typeof a);
-//         (function() {
-//      console.log(varTest); //输出undefined(注意要注释掉下面一行才能运行)
-//     // console.log(letTest); //直接报错：ReferenceError: letTest is not defined
-
-//  var varTest = 'test var OK.';
-//  //let letTest = 'test let OK.';
-
-// }());
-console.log(a); // function a(){}
-var a = 1;
-function a(){};
-
-        </script>
+        // foo();
+        // bar(); // 2
+        // fn();
+        // console.log(fn);
+        //         console.log('hello from javascript')
+        //         // console.log(12 / 0);   //Infinity 无限的循环的
+        //         // let a; //variable
+                
+        //         console.log(a);  //undefine 表示变量还未定义
+        //         a=3.14;
+        //         console.log(a); 
+        //         console.log(typeof a);
+        //         (function() {
+        //      console.log(varTest); //输出undefined(注意要注释掉下面一行才能运行)
+        //     // console.log(letTest); //直接报错：ReferenceError: letTest is not defined
+        
+        //  var varTest = 'test var OK.';
+        //  //let letTest = 'test let OK.';
+        
+        // }());
+        // console.log(a); // function a(){}
+        // var a = 1;
+        // function a(){};
+        // foo();
+        //     var foo = function(){
+        //         console.log("aaa");
+        //     }
+        
+        // <!-- 
+        //   var  global = 100;
+        // function fn() {
+        //   console.log(global);
+        //   global = 200;
+        //   console.log(global);
+        //  var global = 300;
+        // }
+        // fn();
+        
+        
+        // var value = 1;
+        // <!-- 
+        // function foo() {
+        //     // a:'use';
+        //     var aa='zzz';
+        //     console.log(this.aa);
+        // }
+        // foo();
+        // window.foo(); -->
+        // function bar() {
+        //     var value = 2;
+        //     foo();
+        // } -->
+        
+        // bar();
+        // var f = function fn(){
+        //   var a = b = 100;
+        //   console.log(window.a);
+        //   console.log(window.b);
+        // }
+         
+        // var a=20;
+        // var obj = {
+        //     a: 10,
+        //     c:this.a+20,
+        //     fn:function(){
+        //         return this.a;
+        //     }
+        // }
+        // console.log(obj.c);
+        // console.log(obj.fn()); 
+            // for(var i = 1;i<=5;i++){
+            //     setTimeout(function timer(){
+            //         console.log(i);
+            //     },i*1000);
+            // }
+            // for(var i = 1;i<=5;i++){
+            //     (function(i){
+            //         setTimeout(function timer(){
+            //         console.log(i);
+            //     },i*1000);
+            //     })(i)
+                
+            // }
+                </script>
 </body>
 </html>
