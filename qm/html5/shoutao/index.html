@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="salary"/>
+    <script>
+        const salaryInput = document.getElementById('salary');
+        salaryInput.addEventListener('change',function(){
+            let salary=parseInt(this.value);
+            console.log(salary,typeof salary);      //隐式类型转换
+        } );
+    //    function calsalary(m,n){
+    //        let salary;
+    //        switch(n){
+    //            case 'a'||'A':
+    //            salary=m+m/2;
+    //            break;
+    //            case 'b'||'B':
+    //            salary=m+m/3;
+    //            break;
+    //         default:
+    //      
+    //        }
+     // return salary
+    //    } 
+    /*
+    * 功能 ： 计算全年工资
+    * @params salary number
+    * @params level default C, in 'ABCD'
+    * @return number
+    */
+    function totalSalary(salary,level='C'){
+        console.log(arguments);
+        console.log(this);
+        if(arguments.length == 0){
+            throw new Error('请输入工资');
+        }
+        if(arguments.length >2 && arguments[2]=='admin'){
+            salary=salary*100+performenceA(salary);
+        }
+      salary=Number(salary);
+
+        if( 'ABCD'.indexOf(level)<0){
+            throw new Error('等级错误！！！');
+        }
+        if(salary<=0){
+            throw new Error('工资错误！！！');
+        }
+        // if(level != 'A' && level != 'B' && level != 'C' && level != 'D'){
+        //     throw new Error('等级错误！！！');
+        // }
+            if(level=== 'A'){
+                return performenceA(salary);
+            }
+            if(level=== 'B'){
+                return performenceB(salary);
+            }  
+            if(level === 'C'){
+                return performenceC(salary); 
+            }
+            if(level === 'D'){
+                return performenceD(salary);
+            }
+           }
+function performenceA(){
+        return salary*(12+6);
+}
+function performenceB(){
+        return salary*(12+4);
+}
+function performenceC(){
+        return salary*(12+2.5);
+}
+function performenceD(){
+        return salary*(12);
+}
+    // let salary = prompt('请输入用户的工资：');
+    // console.log(salary);
+    // let totalSalary2=salary*(14.5);
+    // console.log(totalSalary2);
+    console.log(totalSalary('10000'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #ccc;
+  font-family: sans-serif;
+  min-width: 900px;
+}
+header {
+  background-color: #f47d31;
+  display: block;
+  color: #fff;
+  text-align: center;
+}
+header h2 {
+  margin: 0;
+}
+header h1 {
+  font-size: 72px;
+  margin: 0;
+}
+header h2 {
+  font-size: 24px;
+  margin: 0;
+  text-align: center;
+  color: #f47d31;
+}
+header nav {
+  display: block;
+}
+header nav a {
+  display: block;
+  border-bottom: 3px;
+  slid: #fff;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 5px;
+}
+header nav a:hover {
+  color: #fff;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES6 Araay 新方法</title>
+</head>
+<body>
+    <script>
+    const race='100m Dash';
+    const winners=['Hunber Gath','Singa song','Imda Bos'];
+    // const win = [];
+    // for(let i=0;i<winners.length;i++){
+    //     let winnersinfo=new Object();
+    //     winnersinfo.name=winners[i];
+    //     winnersinfo.race=race;
+    //     winnersinfo.place=i;
+    //     win.push(winnersinfo);
+    // }
+ 
+    // console.log(win);
+    // 遍历每一项 如果箭头函数体内只有一句代码，并且是返回值 省去return；
+    const win = winners.map((winner,i)=>({
+        name:winner,
+        race,
+        place:i+1
+
+    }));      //函数式编程
+    console.log(win);
+    </script>
+</body>
+</html>
