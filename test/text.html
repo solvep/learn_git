@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WEUI 进度条</title>
+  <link rel="stylesheet" href="weui.css">
 </head>
-<link rel="stylesheet" href="./text.css">
 <body>
-    <div class="div_demo"> 
-        <p>asdaljk</p>
-        <script>
-        // var a = [1,2,3];
-
-        // var b = a;
-
-        // b = [4,5,6,7];
-
-        // console.log(b); //[1,2,3]
-        // console.log(a);
-var a = [1,2];
-var b = a;
-a = [5];
-console.log( b )
-        </script>
+  <div class="weui-progress">
+    <div class="weui-progress__bar">
+      <div class="weui-progress__inner-bar"></div>
     </div>
+    <a href="javascript:;" class="weui-progress__opr">取消</a>
+  </div>
+  <div class="weui-btn-area">
+    <a href="javascript:;" class="weui-btn weui-btn_primary" id="btnUpload">上传</a>
+  </div>
+  <script>
+  const btn = document.getElementById('btnUpload');
+  const progressBar = document.querySelector('.weui-progress__inner-bar');
+  let percent = 0;
+
+  btn.addEventListener('click', function() {
+    if (!this.classList.contains('weui-btn_disabled')) {
+      console.log('clicked');
+      
+      this.classList.add('weui-btn_disabled');
+      // let that = this;
+      setInterval(() => {
+        percent += 2;
+        progressBar.style.width = `${percent}%`;
+        // this被擦掉了
+        // this.classList.remove('weui-btn_disabled');
+      }, 25);
+    }
+  });
+  </script>
 </body>
 </html>
