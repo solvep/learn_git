@@ -34,6 +34,11 @@
 }
 .weui-progress__bar {
   flex: 1;
-  height: 3px;
+  height: 10px;
   background-color: #ebebeb;
+}
+.weui-progress__inner-bar{
+  width: 0;
+  background: #1aad19;
+  height: 100%;
 }

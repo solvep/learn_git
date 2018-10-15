@@ -1,8 +1,8 @@
-Array.prototype.fatherName = "Father";
-const arr = [1, 2, 3];
-arr.name = "Hello world";
-let index;
-console.log(arr.length);
-for(index in arr) {
-    console.log("arr[" + index + "] = " + arr[index]);
-}
+var arr = [1,2,3,4];
+// var sum;
+arr.forEach(function(value,index,array){
+
+    array[index] == value;    //结果为true
+    sum+=value;  
+    });
+console.log(sum);    //结果为 10
