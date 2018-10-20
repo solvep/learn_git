@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="people">
+        <p>Wes</p>
+        <p>Kait</p>
+        <p>Randy</p>
+    </div>
+    <script>
+        //类数组 有数组的属性但是有的方法没有
+        const people = Array.from(document.querySelectorAll('.people p'));
+        console.log(people);
+        const names = people.map((person) => people.textContext)
+        console.log(names);
+
+        const deepDish = {
+            pizzaName:'Deep Dish',
+            size:'Medium',
+            ingreddients:['Marinara','Italian Sausage','Dough','Cheese']
+        };
+        //yaoyaoya 
+        const shoppingList = ['Milk','Flour',...deepDish.ingreddients]
+        shoppingList = [...shoppingList];
+        console.log(shoppingList);
+        const team = ['孙大勇','天哥','kuangxiaogou','mlxg','xiaohu'];
+        //es6 提供了一个解构的能力
+        const [captian,assistant,...players]=team;
+        // const leader = [team[0],team[1]];
+        // const players = team.splice(2);
+    </script>
+</body>
+</html>
