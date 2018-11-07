@@ -1,8 +1,3 @@
-var arr = [1,2,3,4];
-// var sum;
-arr.forEach(function(value,index,array){
-
-    array[index] == value;    //结果为true
-    sum+=value;  
-    });
-console.log(sum);    //结果为 10
+var timestamp = Date.parse(new Date());
+timestamp = timestamp / 1000;
+console.log("当前时间戳为：" + timestamp);

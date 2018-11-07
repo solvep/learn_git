@@ -1,0 +1,17 @@
+@import './weui-btn_globle'
+@import './weui-btn_primary'
+
+
+button ,input 
+ &.weui-btn
+     width 100%
+     border-width 0
+     outline 0
+     -webkit-appearance none  //干掉按钮的默认样式
+     &:focus
+         outline 0
+ &.weui-btn_inline,&.weui-btn_mini
+     width auto         //由文字内容填充
+ &.weui-btn_plain-primary,&.weui-btn_plain-default
+     border-width 1px
+     background-color transparent  //透明
