@@ -1,0 +1,278 @@
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite,
+ code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, 
+ h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, 
+ pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead,
+  time, tr, tt, u, ul, var, video {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0; 
+    /* img 和 input 标签 取消border */
+    font-size: 100%;
+    font: inherit;
+}
+html{
+    font-size: 10px!important;
+    /* font-size: 62.5%;  */
+    /* 元素的默认大小16px */
+}
+body {
+    font-family: Helvetica,Arial,Roboto,PingFang SC,Microsoft Yahei,Hiragino Sans GB,sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+}
+#db-global-nav {
+    font: 12px Helvetica,Arial,sans-serif;
+    line-height: 1.62;
+    font-size: 12px;
+    height: 28px;
+    color: #d5d5d5;
+    background-color: #545652;
+    min-width: 950px;
+    /* 确保导航栏在一行写完 */
+}
+#db-global-nav .top-nav-info {
+    float: right;
+    margin: 0 12px 0 0;
+    line-height: 28px;
+}
+#db-global-nav .top-nav-doubanapp {
+    position: relative;
+    float: right;
+    margin-right: 5px;
+    line-height: 28px;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+a, a:active, a:hover, a:link, a:visited {
+    color: #ababac;
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover {
+    opacity: .8;
+}
+#db-global-nav a:link, #db-global-nav a:visited, #db-global-nav a:hover, #db-global-nav a:active {
+    color: #d5d5d5;
+}
+#db-global-nav a:hover, #db-global-nav a:active {
+    color: #fff;
+    background-color: transparent;
+}
+#db-global-nav .top-nav-info a {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    margin: 0;
+    padding: 0 12px;
+    height: 28px;
+  }
+#db-global-nav .top-nav-doubanapp .lnk-doubanapp {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    padding: 0 8px;
+    height: 28px;
+}
+#db-global-nav .more-items {
+    display: none;
+    position: absolute;
+    left: 0;
+}
+#doubanapp-tip{
+    display: none;
+}
+#db-global-nav .global-nav-items {
+    font-size: 0;
+}
+dl, ol, ul {
+    list-style: none;
+}
+#db-global-nav ul {
+    margin: 0;
+    padding: 0;
+}
+#db-global-nav .global-nav-items li {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    line-height: 28px;
+    font-size: 12px;
+    vertical-align: baseline;
+}
+#db-global-nav .global-nav-items a {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    padding: 0 12px;
+    height: 28px;
+}
+#market-header {
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 1px 2px #f3f2f2;
+    height: 88px;
+}
+#market-header .header-inner {
+    zoom: 1;
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+}
+#market-header .logo {
+    float: left;
+}
+#market-header .market-user {
+    margin-left: 20px;
+    float: right;
+    line-height: 88px;
+}
+#market-header .header-inner:after {
+    clear: both;
+}
+#market-header .market-logo, #market-header .shop-logo {
+    display: block;
+    text-indent: -999em;
+    background-origin: center;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: cover;
+    background-image: -webkit-image-set(url(/f/market/3ae434f…/pics/logos/logo.png) 1x,url(/f/market/55e1169…/pics/logos/logo@2x.png) 2x);
+    background-image:url(https://img3.doubanio.com/f/market/3ae434f9d11e4350d0912e3834d3d651723a69a3/pics/logos/logo.png);
+  }
+#market-header .market-logo {
+    width: 125px;
+    height: 28px;
+    margin-top: 30px;
+  }
+#market-header .market-user .user-people {
+    display: inline-block;
+    cursor: pointer;
+}
+#market-header .market-user .user-people .user-pic img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+#market-header .market-user .user-people .nav-list{
+    display: none;
+  }
+.banner-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+.banner-wrapper {
+    width: 100%;
+    min-width: 1100px;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+.slide-box {
+    zoom: 1;
+    width: 100%;
+}
+
+.banner-wrapper .slide-box {
+    height: 420px;
+}
+.slide-box .slide {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.banner-wrapper .slide-box .slide .slide-inner .slide-item .slide-item-wrapper {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+.slide-box .slide .slide-inner .slide-item img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 30px;
+}
+.banner-wrapper .slide-box .slide .slide-inner .slide-item .slide-item-wrapper img {
+    position: absolute;
+    z-index: 1;
+    width: auto;
+    height: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.banner-wrapper .slide-box .slide .slide-inner .slide-item .slide-item-wrapper img {
+    position: absolute;
+    z-index: 1;
+    width: auto;
+    height: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+.slide-box .slide .slide-button-prev {
+    left: 0;
+    background: url(https://img3.doubanio.com/f/market/b8f709a…/pics/homepage/icon-slides.png) no-repeat -84px 50%;
+  }
+.homepage-wrapper {
+    zoom: 1;
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.product-card-list {
+    margin-bottom: 60px;
+}
+.product-card-list .mui-row {
+    margin-left: -50px;
+    margin-right: -50px;
+}
+.mui-row {
+    min-width: 0;
+    clear: both;
+    overflow: hidden;
+}
+.mui-col.col-4 {
+    width: 33.33333%;
+}
+.mui-col {
+    float: left;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-width: 0;
+}
+.product-card-list .product-card {
+    margin: 0 50px 35px;
+    display: block;
+    clear: both;
+    overflow: hidden;
+    background-color: #fff;
+    margin-bottom: 30px;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+}
+.product-card-list .product-card .product-photo {
+    height: 300px;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #f3f2f2;
+}
+.product-card-list .product-card .product-info {
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}

@@ -27,6 +27,7 @@ const emailInput = document.forms['userForm']['email']
 init();
 function init () {
   if (localStorage.getItem('user')) {
+    // console.log(localStorage.getItem('user'))
     const user = JSON.parse(localStorage.getItem('user'));
     usernameInput.value = user.username;
     emailInput.value = user.email;

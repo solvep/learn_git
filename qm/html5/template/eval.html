@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>eval</title>
+</head>
+<body>
+    <!-- js 相对于浏览器，是什么？
+    浏览器是宿主 js是严格执行ECMA的标准化语言 js 是脚本语言 支持js的语法编译，二进制
+    其实js对于浏览器来说就是一段文本 text -->
+    <script>
+        // 将你的js script src 远程的 下载下来，阻塞，js 文本 编译执行 
+        const scriptStr = "x=10;y=20;document.write(x*y)";
+        eval(scriptStr);
+    
+    </script>
+</body>
+</html>

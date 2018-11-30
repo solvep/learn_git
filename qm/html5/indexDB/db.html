@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>IndexDB</title>
+    <title>IndexedDB</title>
 </head>
 <body>
     <script>
@@ -21,26 +21,29 @@
         request.onsuccess = function(){
             // console.log( request.result)
             db = request.result;
-            console.log('opened',db);
-            // add();
-            read();
+            // console.log('opened',db);
+            //add();
+           // read();
+            // readAll();
+            // updata();
+            // delete1();
+            index()
         }
         request.onupgradeneeded = function (event){   //第一次创建的时候也有这个事件
             db = event.target.result;
-            let objectStore; //table表 collection objectStore存储对象集合的地方
+            let objectStore;                            //table表 collection objectStore存储对象集合的地方
             if(!db.objectStoreNames.contains('person')) {
                 objectStore = db.createObjectStore('person', { keyPath: 'id'});
                 objectStore.createIndex('name', 'name', {unique: false});
                 objectStore.createIndex('email', 'email', {unique: true});
             }
-
         }
         function add(){
             // 索引 index createIndex 查询meet 索引 更加高效
             // 事务的操作更加方便 add
             const request = db.transaction(['person'], 'readwrite')
             .objectStore('person')
-            .add({ id: 1, name: '张三',email: 'zhangsan@example.com', age: 22, single: true,})
+            .add({ id: 1, name: '张三',email: 'zhangsan@essxample.com', age: 22, single: true,})
             request.onsuccess = function(event) {
                 console.log('数据存储成功');
             }
@@ -51,7 +54,7 @@
         function read(){
             var transaction = db.transaction(['person']);
             var objectStore = transaction.objectStore('person');
-            var request = objectStore.get(1);
+            var request = objectStore.get(2);
             request.onsuccess = function(event){
                 if(request.result){
                     console.log(`Name:${request.result.name}`)
@@ -60,6 +63,48 @@
                 }else{
                     console.log('未获得数据');
                 }
+            }
+        }
+        function readAll(){
+            var objectStore = db.transaction('person')
+            .objectStore('person');
+            objectStore.openCursor().onsuccess = function(event){
+                var cursor = event.target.result
+                // console.log(cursor)
+                if(cursor){
+                    console.log('Id: ' + cursor.key);
+                    console.log('Name: ' + cursor.value.name);
+                    cursor.continue();
+                }else{
+                    console.log('没有更多数据了')
+                }
+            }
+        }
+        function updata(){
+            var request = db.transaction(['person'], 'readwrite').objectStore('person')
+            .put({ id: 1, name: 'lisi',email: 'zhangsan@essxample.com', age: 22, single: true,})
+            request.onsuccess = function(){
+                console.log('chenggong')
+            }
+            request.onerror = function(){
+                console.log('lose')
+            }
+        }
+        function delete1() {
+            var request = db.transaction(['person'],'readwrite').objectStore('person')
+            .delete(1)
+            request.onsuccess=function(){
+                console.log('数据删除成功')
+            }
+        }
+        function index(){
+            var request = db.transaction(['person'],'readonly').objectStore('person')
+            .index('name').get('张si');
+            request.onsuccess = function(e){
+                console.log(e.target.result)
+            }
+            request.onerror = function(){
+                console.log('lose')
             }
         }
     </script>
