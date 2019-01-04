@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>v-on实例</title>
+</head>
+<body>
+    <h1>v-on实例</h1>
+    <hr>
+    <div id="app">
+        本场比赛得分，{{score}}
+        <p>
+          <button @click="add(2,$event)">得分</button>
+        </p>
+        <p><btn @click.native="add(2,$event)"></btn></p>
+    </div>
+
+    <button onclick="app.add()">外部</button>
+
+    <script type="text/javascript">
+    var btn = {
+      template:`<button>组件add</button>`
+    }
+        var app=new Vue({
+            el:'#app',
+            data:{
+                message:'hello Vue!',
+                score:0,
+            },
+            methods:{
+              add:function(num,event){
+                if(num){
+                  console.log(num)
+                  this.score+=num;
+                }else{
+                  this.score++;
+                }
+              }
+            },
+            components:{
+                "btn":btn
+              },
+        })
+    </script>
+</body>
+</html>

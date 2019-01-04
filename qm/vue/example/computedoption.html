@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>propsData</title>
+</head>
+<body>
+    <h1>propsData</h1>
+    <hr>
+    <div id="app">
+      <p>{{newPrice}}</p>
+      <ul>
+        <li v-for="item in reversNews">{{item.titled}}-{{item.date}}</li>
+      </ul>
+    </div>
+    <script type="text/javascript">
+    var newsList = [
+      {
+        titled:'过分Jake发你卡上饭卡安徽开始返回1',
+        date:'2017/02/20'
+      },
+      {
+        titled:'过分Jake发你卡上饭卡安徽开始返回2',
+        date:'2017/02/21'
+      },
+      {
+        titled:'过分Jake发你卡上饭卡安徽开始返回3',
+        date:'2017/02/22'
+      },
+      {
+        titled:'过分Jake发你卡上饭卡安徽开始返回4',
+        date:'2017/02/23'
+      }
+    ]
+       var app = new Vue({
+         el:'#app',
+         data:{
+           price:100,
+           newsList:newsList
+         },
+         computed:{
+          newPrice:function(){
+            return this.price='$' +this.price +'美元'
+          },
+          reversNews:function(){
+            return this.newsList.reverse()
+          }
+         }
+       })
+    </script>
+</body>
+</html>

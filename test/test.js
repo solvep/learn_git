@@ -1,3 +1,11 @@
-var timestamp = Date.parse(new Date());
-timestamp = timestamp / 1000;
-console.log("当前时间戳为：" + timestamp);
+function test(){
+  // 函数声明
+  var a = 123;
+}
+// 只有表达式才能被执行符号执行
+
+  var test = (function (){
+    console.log('a')
+  }())
+
+  // 函数表达式

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <!-- <script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script> -->
+    <title>example methods Demo</title>
+</head>
+<body>
+    <h1>example methods Demo</h1>
+    <hr>
+    <div id="app">
+        {{message}}
+    </div>
+    <p><button onclick="destroy()">卸载</button></p>
+    <p><button onclick="relaod()">更新</button></p>
+    <script type="text/javascript">
+        var jspang = Vue.extend({
+          template:`<p>{{message}}</p>`,
+          data:function(){
+            return {
+              message:'Hello,I am JSPang'
+            }
+          },
+          mounted:function(){
+            console.log('mount 被创建')
+          },
+          destroyed:function(){
+            console.log('destroy')
+          },
+          updated:function(){
+            console.log('updated')
+          }
+        })
+          var vm = new jspang().$mount('#app')
+          function destroy(){
+            vm.$destroy();
+          }
+
+          function relaod(){
+            vm.$forceUpdate();
+          }
+    </script>
+</body>
+</html>

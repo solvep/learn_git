@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>Helloworld</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <hr>
+    <div id="app">
+      <component :is="who"></component>
+      <button @click="changeComponent">change</button>
+    </div>
+    
+    <script type="text/javascript">
+        var componentA ={
+          template:`<div style="color:green">A</div>`
+        }
+        var componentB ={
+          template:`<div style="color:green">B</div>`
+        }
+        var componentC ={
+          template:`<div style="color:green">C</div>`
+        }
+        var app=new Vue({
+            el:'#app',
+            data:{
+              who:"componentA"
+            },
+            components:{
+              "componentA":componentA,
+              "componentB":componentB,
+              "componentC":componentC,
+            },
+            methods:{
+              changeComponent:function(){
+                if(this.who == "componentA"){
+                  this.who="componentB"
+                }else if(this.who == "componentB"){
+                  this.who="componentC"
+                }
+                else{
+                  this.who="componentA"
+                }
+              }
+            }
+        })
+    </script>
+</body>
+</html>

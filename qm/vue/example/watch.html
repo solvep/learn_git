@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>watch option</title>
+</head>
+<body>
+    <h1>watch option</h1>
+    <hr>
+    <div id="app">
+        <p>今日的温度：{{temp}}</p>
+        <p>穿衣建议：{{suggest}}</p>
+        <p><button @click="add">升高温度</button><button @click="reduce">降低温度</button></p>
+    </div>
+    <script type="text/javascript">
+    var clothessuggest = ["穿T恤短袖","夹克长裙","棉衣羽绒服"]
+        var app=new Vue({
+            el:'#app',
+            data:{
+              temp:14,
+              suggest:'夹克长裙'
+            },
+            methods:{
+              add:function(){
+                this.temp+=5;
+              },
+              reduce:function(){
+                this.temp-=5;
+              }
+            },
+            // watch:{
+            //   temp:function(newVal,oldVal){
+            //     if(newVal>=26){
+            //       this.suggest=clothessuggest[0]
+            //     }else if(newVal<26&&newVal>0){
+            //       this.suggest=clothessuggest[1]
+            //     }else{
+            //       this.suggest=clothessuggest[2]
+            //     }
+            //   }
+            // }
+        })
+        app.$watch('temp',function(newVal,oldVal){
+          if(newVal>=26){
+                  this.suggest=clothessuggest[0]
+                }else if(newVal<26&&newVal>0){
+                  this.suggest=clothessuggest[1]
+                }else{
+                  this.suggest=clothessuggest[2]
+                }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>Helloworld</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <hr>
+    <div id="app">
+        <jspang></jspang>
+        <panda></panda>
+    </div>
+    <div id="demo">
+      <jspang></jspang>
+    </div>
+    
+    <script type="text/javascript">
+    Vue.component('jspang',{
+      template:`<div style="color:red">我是全局的jspang组件</div>`
+    })
+        var app=new Vue({
+            el:'#app',
+            components:{
+              "panda":{
+                template:`<div style="color:green">我是局部的panda组件</div>`
+              }
+            }
+        })
+        var app=new Vue({
+            el:'#demo',
+          
+        })
+    </script>
+</body>
+</html>

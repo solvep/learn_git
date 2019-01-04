@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>Minxins</title>
+</head>
+<body>
+    <h1>Minxins</h1>
+    <hr>
+    <div id="app">
+        {{num}}
+        <p><button @click="add">add</button></p>
+    </div>
+    <script type="text/javascript">
+        var addConsole ={
+          updated:function(){
+            console.log('数据发生变化，变换成了' + this.num)
+          }
+        }
+        Vue.mixin({
+          updated:function(){
+            console.log("我是全局的")
+          }
+        })
+
+        var app=new Vue({
+            el:'#app',
+            data:{
+              num:1
+            },
+            methods:{
+              add:function(){
+                this.num++;
+              }
+            },
+            updated:function(){
+              console.log('我是原声的updated')
+            },
+            mixins:[addConsole]
+        })
+    </script>
+</body>
+</html>

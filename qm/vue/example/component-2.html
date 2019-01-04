@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>Helloworld</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <hr>
+    <div id="app">
+        <panda :from-here="message"></panda>
+    </div>
+    
+    <script type="text/javascript">
+        var app=new Vue({
+            el:'#app',
+            data:{
+              message:'sichuan'
+            },
+            components:{
+              "panda":{
+                template:
+    `<div style="color:green">Panda from {{fromHere}}</div>`,
+                props:['fromHere']
+              }
+            }
+        })
+        var app=new Vue({
+            el:'#demo',
+          
+        })
+    </script>
+</body>
+</html>

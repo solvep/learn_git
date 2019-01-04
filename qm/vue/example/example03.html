@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>v-on实例</title>
+</head>
+<body>
+    <h1>v-on实例</h1>
+    <hr>
+    <div id="app">
+        本场比赛得分，{{score}}
+        <p>
+          <button v-on:click="add">得分</button>
+        </p>
+    </div>
+    <p><button onclick="reduce()">reduce</button></p> 
+    <p><button onclick="reduceonce()">reduceonce</button></p> 
+    <p><button onclick="off()">off</button></p> 
+    <script type="text/javascript">
+        var app=new Vue({
+            el:'#app',
+            data:{
+                score:0,
+            },
+            methods:{
+              add:function(){
+                this.score++;
+              }
+            }
+        });
+
+        app.$on("reduce",function(){
+          console.log("执行了reduce方法")
+          this.score--;
+        })
+        app.$once("reduceonce",function(){
+          console.log("执行了reduce方法")
+          this.score--;
+        })
+        function reduce(){
+          app.$emit('reduce');
+        }
+        function reduceonce(){
+          app.$emit('reduceonce')
+        }
+        function off(){
+          app.$off('reduce')
+        }
+    </script>
+</body>
+</html>

@@ -8,13 +8,138 @@
   <link rel="stylesheet" href="text.css">
 </head>
 <body>
+  <ul>
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+    <li>d</li>
+  </ul>
   <script>
-  function hello(){
-    console.log(this.anum);
-  }
-var anum = 0;
+    // function test(){
+    //   var lilist = document.getElementsByTagName('li');
+    //   for(var i = 0;i<lilist.length;i++){
+    //     lilist[i].addEventListener('click',function(){
+    //            console.log(i)
+    //   })
+ 
+    //   }
+    // }
+    // test();
+// function test(){
+// 函数声明
+//   var a = 123;
+// }
+// 只有表达式才能被执行符号执行
 
-hello(); 
+  // (function test(){
+  //   console.log('a')
+  // }());
+  // function test(a,b,c,d){
+  //   console.log(a + b + c +d);
+  // }(1,2,3,4);
+  // w3c表达式
+  // var test = 23 ;
+  // 函数表达式
+  
+  
+  //  function test(){
+  //    var arr = [];
+  //    for (var i = 0;i < 10; i ++){
+  //      (function (j){
+  //       // console.log(j)
+  //       arr[j] = function (){
+  //        console.log(j + "");
+  //      }
+  //      }(i))
+  //    }
+  //    return arr;
+  //  }
+  //  var myArr = test();
+  //  for(var j = 0; j < 10 ; j ++){
+  //    myArr[j]();
+  //  }
+  // function test(){
+  //    var arr = [];
+  //    for (let i = 0;i < 10; i ++){
+       
+  //       arr[i] = function (){
+  //        console.log(i + "");
+  //      }
+  //    }
+  //   //  console.log(i)
+  //    return arr;
+  //  }
+
+  //  var myArr = test();
+  //  for(var j = 0; j < 10 ; j ++){
+  //    myArr[j]();
+  //  }
+  // a = 100;
+  // function demo(e){
+  //   function e(){}
+  //   arguments[0] = 2;
+  //   document.write(e);//2
+  //   if(a){
+  //     var b = 123;
+  //     function c(){}}
+  //   var c;
+  //   a = 10;
+  //   var a;
+  //   document.write(b);//undefine
+  //   f = 123;
+  //   document.write(c);//undefine
+  //   document.write(a);//10
+  // }
+  // var a;
+  // demo(1);
+  // document.write(a);//100
+  // document.write(f);//123
+  // function retByteslen(target){
+  //   var count,len ;
+  //   count = len = target.length;
+  //   for(var i = 0;i<len;i++){
+  //     if(target.charCodeAt(i) > 255 ){
+  //       count++;
+  //     }
+  //   }
+  //   console.log(count)
+  // }
+  // var f = (
+  //   function f(){
+  //     return '1';
+  //   },
+  //   function g(){
+  //     return 2;
+  //   }
+  // )();
+  
+  // console.log(typeof f)
+//  var x = 1;
+//  if(function f(){}){
+//    x += typeof f;
+//  }
+//  console.log(x);
+// (function f(){})
+// console.log(typeof f);
+// null undefined NaN 0 false ""
+    //  if(""){
+    //    console.log('aaaa')
+    //  }
+    function func() {
+    var arr = [];
+    for(var i = 0;i<3;i++){
+        (function(){
+            arr.push(()=> {
+                console.log(i);
+            })
+        })()
+    }
+    return arr
+}
+var result = func();
+result.forEach((item)=> {
+    item();
+})
   </script>
 </body>
 </html>

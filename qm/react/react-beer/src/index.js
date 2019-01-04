@@ -1,0 +1,17 @@
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import {BrowserRouter,Route} from 'react-router-dom';
+import App from './App';
+import Single from './components/Single'
+import './style.css';
+
+
+render(
+  <BrowserRouter>
+    <div className="test">
+      <Route exact path="/" component={App} />
+      <Route path="/beer" component={Single} />
+      <Route path="/Search/:searchTerm" component={App} />
+    </div>
+  </BrowserRouter>
+, document.getElementById('root'));

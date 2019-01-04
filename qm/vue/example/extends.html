@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>Minxins</title>
+</head>
+<body>
+    <h1>Minxins</h1>
+    <hr>
+    <div id="app">
+       ${num}
+        <p><button @click="add">add</button></p>
+    </div>
+    <script type="text/javascript">
+        var extendsObj = {
+          updated:function(){
+            console.log('我是扩展的updated')
+          }
+        }
+        var app=new Vue({
+            el:'#app',
+            data:{
+              num:1
+            },
+            methods:{
+              add:function(){
+                console.log("我是原生的方法")
+                this.num++;
+              }
+            },
+            updated:function(){
+              console.log('我是原声的updated')
+            },
+            extends:extendsObj,
+            delimiters:['${','}']
+        })
+    </script>
+</body>
+</html>
