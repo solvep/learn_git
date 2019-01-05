@@ -1,0 +1,40 @@
+.top-buffer {
+  margin-top: 20px;
+}
+
+.navbar-icon {
+  width: 5em;
+  height: 5em;
+}
+
+.about-page .jumbotron {
+  margin: 0;
+  background: rgba(9, 69, 95, 0.8);
+  color: white;
+  border-radius: 0 !important;
+}
+
+/*React apply activeClassName to <a> element, but Bootstrap active class is over <li> element*/
+
+.navbar .nav .active,
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+  background: white !important;
+  color: #333 !important;
+}
+
+.avatar {
+  max-width: 80px
+}
+
+#navbar {
+  padding-left: 0px !important;
+}
+
+#header-title {
+  background-color: rgb(238, 235, 235);
+}
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jb21wb25lbnRzL2Nzcy9zaXRlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBIiwiZmlsZSI6ImFwcC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudG9wLWJ1ZmZlciB7XHJcbiAgbWFyZ2luLXRvcDogMjBweDtcclxufVxyXG5cclxuLm5hdmJhci1pY29uIHtcclxuICB3aWR0aDogNWVtO1xyXG4gIGhlaWdodDogNWVtO1xyXG59XHJcblxyXG4uYWJvdXQtcGFnZSAuanVtYm90cm9uIHtcclxuICBtYXJnaW46IDA7XHJcbiAgYmFja2dyb3VuZDogcmdiYSg5LCA2OSwgOTUsIDAuOCk7XHJcbiAgY29sb3I6IHdoaXRlO1xyXG4gIGJvcmRlci1yYWRpdXM6IDAgIWltcG9ydGFudDtcclxufVxyXG5cclxuLypSZWFjdCBhcHBseSBhY3RpdmVDbGFzc05hbWUgdG8gPGE+IGVsZW1lbnQsIGJ1dCBCb290c3RyYXAgYWN0aXZlIGNsYXNzIGlzIG92ZXIgPGxpPiBlbGVtZW50Ki9cclxuXHJcbi5uYXZiYXIgLm5hdiAuYWN0aXZlLFxyXG4ubmF2YmFyLWRlZmF1bHQgLm5hdmJhci1uYXY+LmFjdGl2ZT5hLFxyXG4ubmF2YmFyLWRlZmF1bHQgLm5hdmJhci1uYXY+LmFjdGl2ZT5hOmhvdmVyLFxyXG4ubmF2YmFyLWRlZmF1bHQgLm5hdmJhci1uYXY+LmFjdGl2ZT5hOmZvY3VzIHtcclxuICBiYWNrZ3JvdW5kOiB3aGl0ZSAhaW1wb3J0YW50O1xyXG4gIGNvbG9yOiAjMzMzICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi5hdmF0YXIge1xyXG4gIG1heC13aWR0aDogODBweFxyXG59XHJcblxyXG4jbmF2YmFyIHtcclxuICBwYWRkaW5nLWxlZnQ6IDBweCAhaW1wb3J0YW50O1xyXG59XHJcblxyXG4jaGVhZGVyLXRpdGxlIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjM4LCAyMzUsIDIzNSk7XHJcbn1cclxuIl0sInNvdXJjZVJvb3QiOiIifQ==*/
