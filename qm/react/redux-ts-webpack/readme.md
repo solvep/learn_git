@@ -18,3 +18,14 @@
     webpack-dev-server port
     html-plugin src/index.html template
   babel js编译
+
+- typesctipt 在react中做加法，让项目强类型化，减少错误。
+1. members: MemberEntity[]
+  生命周期中请求，api 方法返回值类型
+  interface MemberEntity
+2. model层
+3. api层
+
+
+common input,button
+form => page (redux state) => pageContainer

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './css/site.css';
+import '../css/site.css';
 
 export const About:React.StatelessComponent <{}> =() =>{
   return (
@@ -19,7 +19,6 @@ export const About:React.StatelessComponent <{}> =() =>{
           </h3>
         </div>
       </div>
-
       <div className="col-2 top-buffer">
         <h3>Highlights</h3>
         <hr />
@@ -29,7 +28,6 @@ export const About:React.StatelessComponent <{}> =() =>{
             </small>
         </h3>
       </div>
-
       <div className="col-10">
         <ul>
           <li className="top-buffer">
@@ -55,6 +53,5 @@ export const About:React.StatelessComponent <{}> =() =>{
         </ul>
       </div>
     </div>
-
   )
 }
