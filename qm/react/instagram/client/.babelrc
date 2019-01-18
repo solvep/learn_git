@@ -1,0 +1,3 @@
+{
+  "presets": ["env","react"]   //env+react 编译的预处理
+}
