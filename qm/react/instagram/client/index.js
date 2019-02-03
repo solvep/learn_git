@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDO from 'react-dom';
+import ReactDOM from 'react-dom';
 import Instagram from './src/pages/index.js';
 
 ReactDOM.render(

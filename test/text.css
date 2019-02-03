@@ -6,5 +6,5 @@ li:nth-child(n){
   background-color: blue
 }
 li:nth-child(2n){
-  background-color: red
+  background-color: red;
 }

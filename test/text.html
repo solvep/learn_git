@@ -8,13 +8,8 @@
   <link rel="stylesheet" href="text.css">
 </head>
 <body>
-  <ul>
-    <li>a</li>
-    <li>b</li>
-    <li>c</li>
-    <li>d</li>
-  </ul>
-  <script>
+
+  <script src="./test.js">
     // function test(){
     //   var lilist = document.getElementsByTagName('li');
     //   for(var i = 0;i<lilist.length;i++){
@@ -124,22 +119,92 @@
 // null undefined NaN 0 false ""
     //  if(""){
     //    console.log('aaaa')
-    //  }
-    function func() {
-    var arr = [];
-    for(var i = 0;i<3;i++){
-        (function(){
-            arr.push(()=> {
-                console.log(i);
-            })
-        })()
-    }
-    return arr
-}
-var result = func();
-result.forEach((item)=> {
-    item();
-})
+//     //  }
+//     function func() {
+//     var arr = [];
+//     for(var i = 0;i<3;i++){
+//         (function(){
+//             arr.push(()=> {
+//                 console.log(i);
+//             })
+//         })()
+//     }
+//     return arr
+// }
+// var result = func();
+// result.forEach((item)=> {
+//     item();
+// })
+  </script>
+  <script type="text/javascript">
+    // var org = {
+    //     department1 :{
+    //         jicheng:{
+    //             name:'abc',
+    //             age:12
+    //         },
+    //         xuming:{
+    //             name:'adfa'
+    //         }
+    //     }
+    // }
+    // var name = 'afsdf'
+    // var init = (function(){
+    //     var name  = 'abc';
+    //     function callName (){
+    //         console.log(name);
+    //     }
+    //     return function(){
+    //         callName()
+    //     }
+    // }())
+
+    // var initDeng = (function(){
+    //     var name = 123;
+    //     function callName (){
+    //         console.log(name);
+    //     }
+    //     return function(){
+    //         callName();
+    //     }
+    // }())
+    // var deng = {
+    //     wife1 : {name:"xiaoliu"},
+    //     wife2 : {name:"xiaozhang"},
+    //     wife3 : {name:"xiaowang"},
+    //     wife4 : {name:"xiaomeng"},
+    //     sayWife : function (num){
+    //         return this['wife'+num];
+    //     }
+    // }
+        // var arr = [1,2,2,32,32,32,2,5,5,18,9,6]
+        // enum 遍历 枚举
+        // var obj = {
+        //     name : '159',
+        //     age:13,
+        //     sex : 'male',
+        //     height: 180,
+        //     weight: 75,
+        //     __proto__ :{
+        //         lastName:'deng'
+        //     }
+        // }
+        // Object.prototype.abc = '123'
+        // for (var prop in obj){
+        //     if(obj.hasOwnProperty(prop)){
+        //         console.log(obj[prop] + " " + typeof(prop));
+        //     }
+            
+        // }
+        // var a = 5;
+        // function test(){
+        //   a = 0;
+        //   console.log(a); 0   0
+        //   console.log(this.a); 5 undefined
+        //   var a ;
+        //   console.log(a); 0 0
+        // }
+        // new test();
   </script>
 </body>
 </html>

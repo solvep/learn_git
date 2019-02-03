@@ -1,3 +1,13 @@
 {
-  "presets": ["env","react"]   //env+react 编译的预处理
+  "presets": ["env","react"],   //env+react 编译的预处理
+  "plugins":[
+    "transform-class-properties",    [
+      "import",
+        {
+            "libraryName": "antd",
+            "libraryDirectory": "es",
+            "style": "css"
+        }
+    ]
+  ]
 }
