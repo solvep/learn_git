@@ -6,9 +6,45 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>WEUI 进度条</title>
   <link rel="stylesheet" href="text.css">
+  <style>
+    .content{
+      display: none;
+      width: 200px;
+      height: 200px;
+      border: 2px solid red;
+    }
+    .active{
+      background-color: red;
+    }
+  </style>
 </head>
-<body>
 
+<body>
+  <!-- <div name="only">123</div> -->
+  <!-- <div name="input"></div> -->
+  <!-- <input type="text" name="input"/> -->
+  <!-- <div>
+    <strong></strong>
+  </div>
+  <div>
+    <span>
+      <strong class="demo"></strong>
+    </span>
+  </div> -->
+  <!-- getElementsByTagName
+  getElementsByTagName
+  getElementsByTagName
+  getElementsByTagName -->
+  <!-- <div>
+    123
+    <!-- This is comment -->
+    <strong></strong>
+    <span></span>
+    <em></em>
+    <i></i>
+    <b></b>
+
+  </div> -->
   <script src="./test.js">
     // function test(){
     //   var lilist = document.getElementsByTagName('li');
@@ -137,6 +173,52 @@
 // })
   </script>
   <script type="text/javascript">
+  var div = document.createElement('div');
+  div.innerHTML = 'adsfjakl';
+  
+  // var strong = document.querySelector('div>span strong.demo')
+  // var div =  document.getElementById('only');
+    // var strong = document.getElementsByTagName('strong')[0];
+    // var name = document.getElementsByName('input');
+
+  // document.body.appendChild(div);
+  // div.style.width = "100px";
+  // div.style.height = "100px";
+  // div.style.backgroundColor = "red";
+  // div.style.position = "absolute";
+  // div.style.left = "0";
+  // div.style.top = "0";
+  //   var speed = 1;
+  //   var timer = setInterval(function(){
+  //     div.style.left = parseInt(div.style.left) + 1 + "px";
+  //     div.style.top = parseInt(div.style.top) + 1 + "px";
+  //     if(parseInt(div.style.top) > 500 && parseInt(div.style.left) > 200){
+  //       clearInterval(timer)
+  //     }
+  //   },30)
+  // var btn = document.getElementsByTagName('button');
+  // var div = document.getElementsByClassName('content');
+  //   for (var i = 0; i<btn.length ; i++){
+  //    (function(n){
+  //     btn[n].onclick = function () {
+  //       for(var j = 0;j<btn.length ; j++){
+  //         btn[j].className = "";
+  //         div[j].style.display = "none";
+  //       }
+  //       this.className = "active";
+  //       div[n].style.display = 'block';
+  //     }
+  //    }(i))
+  //   }
+  // var div = document.getElementsByTagName('div')[0];
+  // div.style.width = '100px'
+  // div.style.height = '100px'
+  // div.style.backgroundColor = 'red'
+  // var bol = false
+  // div.onclick = function (){
+  //   bol = !bol;
+  //   bol ? (this.style.background = "green") : (this.style.backgroundColor ="red")
+  // }
     // var org = {
     //     department1 :{
     //         jicheng:{

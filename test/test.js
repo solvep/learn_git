@@ -160,17 +160,40 @@
 // }
 
 // var car = new Car ();
-Array.prototype.unique = function(){
-  var obj ={},
-    len = this.length ,
-    arr = [];
-  for(let i = 0; i<len ; i++){
-    if(!obj[this[i]]){
-      obj[this[i]] = "abc";
-      arr.push(this[i])
-    }
-  }
-  return arr
-}
+// Array.prototype.unique = function(){
+//   var obj ={},
+//     len = this.length ,
+//     arr = [];
+//   for(let i = 0; i<len ; i++){
+//     if(!obj[this[i]]){
+//       obj[this[i]] = "abc";
+//       arr.push(this[i])
+//     }
+//   }
+//   return arr
+// }
 
-var arr = [11,2,4,5,3,2,3,4,35]
+// // var arr = [11,2,4,5,3,2,3,4,35]
+// var num = 123;
+// num.abc = 'abc';
+// //new Number(num).abc = 'abc'   -->delete
+// console.log(num.abc)
+// str = '123';
+// string = '123'
+// if(NaN){
+//   console.log('132')
+// }
+// console.log(undefined === undefined)
+
+// 2/8
+//  try {
+//   document.write('e');
+//   console.log(b);
+//   console.log('c');
+//   console.log('d');
+//  }catch(e){
+//   console.log(e.name + ':' + e.message)
+//  }
+//  "use strict";
+//  a = 3;
+
