@@ -1,292 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>WEUI 进度条</title>
-  <link rel="stylesheet" href="text.css">
-  <style>
-    .content{
-      display: none;
-      width: 200px;
-      height: 200px;
-      border: 2px solid red;
-    }
-    .active{
-      background-color: red;
-    }
-  </style>
+<meta charset="utf-8">
+<title>菜鸟教程</title>
+<style>
+div {
+    border: 1px solid black;
+    width: 200px;
+    height: 100px;
+    overflow: scroll;
+}
+</style>
 </head>
-
 <body>
-  <!-- <div name="only">123</div> -->
-  <!-- <div name="input"></div> -->
-  <!-- <input type="text" name="input"/> -->
-  <!-- <div>
-    <strong></strong>
-  </div>
-  <div>
-    <span>
-      <strong class="demo"></strong>
-    </span>
-  </div> -->
-  <!-- getElementsByTagName
-  getElementsByTagName
-  getElementsByTagName
-  getElementsByTagName -->
-  <!-- <div>
-    123
-    <!-- This is comment -->
-    <strong></strong>
-    <span></span>
-    <em></em>
-    <i></i>
-    <b></b>
 
-  </div> -->
-  <script src="./test.js">
-    // function test(){
-    //   var lilist = document.getElementsByTagName('li');
-    //   for(var i = 0;i<lilist.length;i++){
-    //     lilist[i].addEventListener('click',function(){
-    //            console.log(i)
-    //   })
- 
-    //   }
-    // }
-    // test();
-// function test(){
-// 函数声明
-//   var a = 123;
+<p>该实例演示了如何使用 addEventListener() 方法向 div 元素中添加 "onscroll" 事件。</p>
+<p>尝试滚动 div</p>
+<div id="myDIV">In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
+<br><br>
+'Whenever you feel like criticizing anyone,' he told me, just remember that all the people in this world haven't had the advantages that you've had.'</div>
+<p id="demo"></p>
+<script>
+// document.getElementById("myDIV").addEventListener("scroll", debounce(myFunction,1000,false
+// ));
+// function myFunction() {
+//     console.log('gun')
 // }
-// 只有表达式才能被执行符号执行
+function doubleAfter2seconds(num) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(2 * num);
+            // console.log(num);
+        }, 2000);
+    })
+}
+async function testResult() {
+    let first = await doubleAfter2seconds(30);
+    let second = await doubleAfter2seconds(50);
+    let third = await doubleAfter2seconds(30);
+    console.log(first + second + third);
+}
+testResult();
+console.log('虽然在后面，但是我先执行');
 
-  // (function test(){
-  //   console.log('a')
-  // }());
-  // function test(a,b,c,d){
-  //   console.log(a + b + c +d);
-  // }(1,2,3,4);
-  // w3c表达式
-  // var test = 23 ;
-  // 函数表达式
-  
-  
-  //  function test(){
-  //    var arr = [];
-  //    for (var i = 0;i < 10; i ++){
-  //      (function (j){
-  //       // console.log(j)
-  //       arr[j] = function (){
-  //        console.log(j + "");
-  //      }
-  //      }(i))
-  //    }
-  //    return arr;
-  //  }
-  //  var myArr = test();
-  //  for(var j = 0; j < 10 ; j ++){
-  //    myArr[j]();
-  //  }
-  // function test(){
-  //    var arr = [];
-  //    for (let i = 0;i < 10; i ++){
-       
-  //       arr[i] = function (){
-  //        console.log(i + "");
-  //      }
-  //    }
-  //   //  console.log(i)
-  //    return arr;
-  //  }
+</script>
 
-  //  var myArr = test();
-  //  for(var j = 0; j < 10 ; j ++){
-  //    myArr[j]();
-  //  }
-  // a = 100;
-  // function demo(e){
-  //   function e(){}
-  //   arguments[0] = 2;
-  //   document.write(e);//2
-  //   if(a){
-  //     var b = 123;
-  //     function c(){}}
-  //   var c;
-  //   a = 10;
-  //   var a;
-  //   document.write(b);//undefine
-  //   f = 123;
-  //   document.write(c);//undefine
-  //   document.write(a);//10
-  // }
-  // var a;
-  // demo(1);
-  // document.write(a);//100
-  // document.write(f);//123
-  // function retByteslen(target){
-  //   var count,len ;
-  //   count = len = target.length;
-  //   for(var i = 0;i<len;i++){
-  //     if(target.charCodeAt(i) > 255 ){
-  //       count++;
-  //     }
-  //   }
-  //   console.log(count)
-  // }
-  // var f = (
-  //   function f(){
-  //     return '1';
-  //   },
-  //   function g(){
-  //     return 2;
-  //   }
-  // )();
-  
-  // console.log(typeof f)
-//  var x = 1;
-//  if(function f(){}){
-//    x += typeof f;
-//  }
-//  console.log(x);
-// (function f(){})
-// console.log(typeof f);
-// null undefined NaN 0 false ""
-    //  if(""){
-    //    console.log('aaaa')
-//     //  }
-//     function func() {
-//     var arr = [];
-//     for(var i = 0;i<3;i++){
-//         (function(){
-//             arr.push(()=> {
-//                 console.log(i);
-//             })
-//         })()
-//     }
-//     return arr
-// }
-// var result = func();
-// result.forEach((item)=> {
-//     item();
-// })
-  </script>
-  <script type="text/javascript">
-  var div = document.createElement('div');
-  div.innerHTML = 'adsfjakl';
-  
-  // var strong = document.querySelector('div>span strong.demo')
-  // var div =  document.getElementById('only');
-    // var strong = document.getElementsByTagName('strong')[0];
-    // var name = document.getElementsByName('input');
-
-  // document.body.appendChild(div);
-  // div.style.width = "100px";
-  // div.style.height = "100px";
-  // div.style.backgroundColor = "red";
-  // div.style.position = "absolute";
-  // div.style.left = "0";
-  // div.style.top = "0";
-  //   var speed = 1;
-  //   var timer = setInterval(function(){
-  //     div.style.left = parseInt(div.style.left) + 1 + "px";
-  //     div.style.top = parseInt(div.style.top) + 1 + "px";
-  //     if(parseInt(div.style.top) > 500 && parseInt(div.style.left) > 200){
-  //       clearInterval(timer)
-  //     }
-  //   },30)
-  // var btn = document.getElementsByTagName('button');
-  // var div = document.getElementsByClassName('content');
-  //   for (var i = 0; i<btn.length ; i++){
-  //    (function(n){
-  //     btn[n].onclick = function () {
-  //       for(var j = 0;j<btn.length ; j++){
-  //         btn[j].className = "";
-  //         div[j].style.display = "none";
-  //       }
-  //       this.className = "active";
-  //       div[n].style.display = 'block';
-  //     }
-  //    }(i))
-  //   }
-  // var div = document.getElementsByTagName('div')[0];
-  // div.style.width = '100px'
-  // div.style.height = '100px'
-  // div.style.backgroundColor = 'red'
-  // var bol = false
-  // div.onclick = function (){
-  //   bol = !bol;
-  //   bol ? (this.style.background = "green") : (this.style.backgroundColor ="red")
-  // }
-    // var org = {
-    //     department1 :{
-    //         jicheng:{
-    //             name:'abc',
-    //             age:12
-    //         },
-    //         xuming:{
-    //             name:'adfa'
-    //         }
-    //     }
-    // }
-    // var name = 'afsdf'
-    // var init = (function(){
-    //     var name  = 'abc';
-    //     function callName (){
-    //         console.log(name);
-    //     }
-    //     return function(){
-    //         callName()
-    //     }
-    // }())
-
-    // var initDeng = (function(){
-    //     var name = 123;
-    //     function callName (){
-    //         console.log(name);
-    //     }
-    //     return function(){
-    //         callName();
-    //     }
-    // }())
-    // var deng = {
-    //     wife1 : {name:"xiaoliu"},
-    //     wife2 : {name:"xiaozhang"},
-    //     wife3 : {name:"xiaowang"},
-    //     wife4 : {name:"xiaomeng"},
-    //     sayWife : function (num){
-    //         return this['wife'+num];
-    //     }
-    // }
-        // var arr = [1,2,2,32,32,32,2,5,5,18,9,6]
-        // enum 遍历 枚举
-        // var obj = {
-        //     name : '159',
-        //     age:13,
-        //     sex : 'male',
-        //     height: 180,
-        //     weight: 75,
-        //     __proto__ :{
-        //         lastName:'deng'
-        //     }
-        // }
-        // Object.prototype.abc = '123'
-        // for (var prop in obj){
-        //     if(obj.hasOwnProperty(prop)){
-        //         console.log(obj[prop] + " " + typeof(prop));
-        //     }
-            
-        // }
-        // var a = 5;
-        // function test(){
-        //   a = 0;
-        //   console.log(a); 0   0
-        //   console.log(this.a); 5 undefined
-        //   var a ;
-        //   console.log(a); 0 0
-        // }
-        // new test();
-  </script>
 </body>
 </html>

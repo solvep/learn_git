@@ -1,0 +1,13 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.leftPanel{
+  display: inline-block;
+  vertical-align: top;
+}
+.rightPanel{
+  display: inline-block;
+  margin-left: 20px;
+}

@@ -2,9 +2,9 @@
   margin: 0;
   padding: 0;
 }
-li:nth-child(n){
-  background-color: blue
-}
-li:nth-child(2n){
-  background-color: red;
-}
+/* div{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color:black;
+} */
