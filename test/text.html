@@ -1,100 +1,13 @@
-<!-- <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>菜鸟教程</title>
-<style>
-div {
-    border: 1px solid black;
-    width: 200px;
-    height: 100px;
-    overflow: scroll;
-}
-</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
 </head>
+	<script src="./test.js"></script>
 <body>
-
-<p>该实例演示了如何使用 addEventListener() 方法向 div 元素中添加 "onscroll" 事件。</p>
-<p>尝试滚动 div</p>
-<div id="myDIV">In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
-<br><br>
-'Whenever you feel like criticizing anyone,' he told me, just remember that all the people in this world haven't had the advantages that you've had.'</div>
-<p id="demo"></p>
-
-<script>
-// document.getElementById("myDIV").addEventListener("scroll", debounce(myFunction,1000,false
-// ));
-// function myFunction() {
-//     console.log('gun')
-// }
-
-function doubleAfter2seconds(num) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(2 * num);
-            // console.log(num);
-        }, 2000);
-    })
-}
-async function testResult() {
-    let first = await doubleAfter2seconds(30);
-    let second = await doubleAfter2seconds(50);
-    let third = await doubleAfter2seconds(30);
-    console.log(first + second + third);
-}
-testResult();
-console.log('虽然在后面，但是我先执行');
-
-</script>
-
+	
 </body>
-</html> -->
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" >
-<head>
-<title>3</title>
-</head>
-<body>
-	<div class="pin-button">
-		<a class="ui blue inverted pull-right button" href="/songs">关于我们</a><a
-			class="ui green inverted pull-right button" href="/signup">注册</a>
-	</div>
-	<img id="rainyday"
-		src="./night.jpg" />
-	<div class="wallpaper">
-		<div class="login-form">
-			<form action="LoginServlet" accept-charset="UTF-8"
-				method="post">
-				<input name="utf8" type="hidden" value="&#x2713;" />
-				<div class="ui form basic segment">
-					<div id="login-errors"></div>
-					<div class="field">
-						<input placeholder="账号" type="text" 
-							name="username" />
-					</div>
-					<div class="field">
-						<input placeholder="密码" type="password"
-							name="password" />
-					</div>
-					<div class="field">
-						<div class="ui toggle checkbox">
-							<input type="hidden" value="0" /><input
-								type="checkbox" value="1" 
-								id="session_remember" /><label>记住我</label>
-						</div>
-						<a class="forget-password pull-right" href="/password_resets/new">忘记密码?</a>
-					</div>
-					<input type="submit" name="commit" value="登录"
-						class="ui green fluid button" />
-				</div>
-			</form>
-		</div>
-	</div>
-</form>
-</body>
-<script>
-    var rem = document.getElementById('session_remember');
-    rem.onclick
-</script>
 </html>

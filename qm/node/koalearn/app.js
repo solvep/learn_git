@@ -9,6 +9,6 @@ app.use(async (ctx,next)=>{
  }else{
    ctx.body = '我是登陆界面'
  }
-})
+}) 
 
 app.listen(3000)
