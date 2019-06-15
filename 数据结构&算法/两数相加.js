@@ -12,7 +12,7 @@ function listToString(list){
     let str = '';
     while(list){
         str = str + list.value;
-        list = list.next?list.next:null;
+        list = list.next ? list.next:null;
     }
     return str.split('').reverse.join('');
 }
