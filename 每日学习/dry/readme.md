@@ -1,3 +1,4 @@
+6.11
 js 的运行环境有三种情况 全局环境 函数环境 eval （不建议使用）
 js引擎会以栈的方式来处理他们，这个栈我们称之为函数调用栈，栈底永远都是全局上下文。
 执行上下文可以理解为函数的执行环境，每一个函数创建时，都会给对应函数创建一个这样的执行环境。
@@ -32,3 +33,40 @@ js代码的整个执行过程，分为两个阶段，代码编译阶段与代码
 this的指向是在函数被调用的时候确定的。
 在函数执行过程中，this一旦被确定就不可更改了。
 call() , apply() call是一个一个的传递，apply是以数组的形式传递。
+
+6.23
+纯函数：相同的输入总会得到相同的输出，并且不会产生副作用的函数，就是纯函数
+数组的操作，会改变原数组：pop,shift,push,unshift,sort,reverse,splice
+不会改变原数组：concat,slice,join,split,toString/
+回文判断：split->字符串到数组，join->数组到字符串，reverse->数组倒置
+slice 类数组转化为数组
+
+颗粒化是指这样一个函数，他接收函数A作为参数，运行后能返回一个新的函数。并且这个新的函数能够处理函数A的剩余参数。
+
+防 抖：function deboundce(fn,time){
+    let timeout = null;
+    return function(){
+        clearTimeout(timeout);
+        timeout = setTimeout(()=>{
+            fn.call(this,...argument)
+        },time)
+    }
+}
+
+节 流：规定的时间内只能执行一次。
+ function throttle(fn){
+    let canRun = true
+    if(!canRun){
+        return
+    }
+    canRun = false
+    setTimeout(()=>{
+        canRun = true
+        fn.call(this,argument)
+    },time)
+}
+
+in 常用来判断当前页面是否在移动端打开 isMobile = 'ontouchstart' in document;
+很多人喜欢用ua，但不是很好的方法
+
+获取元素的样式：document.defaultView.getComputedStyle ： elem.currentStyle[property]

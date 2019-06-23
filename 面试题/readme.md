@@ -1,4 +1,3 @@
-6/12
 面试题：url到页面的渲染完成，发生了什么
 1）DNS解析，将域名地址解析为IP地址
 - 浏览器DNS缓存
@@ -39,3 +38,66 @@
 第四次挥手，由浏览器发起，告诉服务器，我东西接受完了，我准备关闭了（响应报文），你也准备关闭吧
 
 性能优化：抛开了对页面的具体分析，任何的性能优化都是站不住脚的，盲目的使用一些优化措施，结果可能会适得其反。因此切实的去分析页面的实际性能表现，不断的改进测试，才是正确的优化途径。
+
+360面试准备：
+1.flex布局，flex属性解释
+  flex有六种属性，flex-derection：定义主轴的方向。flex-wrap：主轴是否换行。justify-content：主轴的对齐方式。align-item：交叉轴的对齐方式。align-content：多根轴线的对齐方式。flex-flow：flex-derection和flex-wrap的复合属性。
+  flex的项目属性
+    flex :1 =>flex-grow : 1 , flex-shirnk : 1 ,flex-basis: 0 
+    flex-basis 一般和flex-grow ， shirnk配合使用。
+    order 顺序先后。 align-self : 单个项目于其他项目不一样。
+
+2.块级格式化上下文BFC
+  1. 防止垂直margin重叠
+  2. 清除内部浮动这样浮动子元素的高度也会参与到父元素的的高度计算。
+  3. 自适应两栏布局（bfc元素不会与float元素发生重叠）
+  4. 阻止普通文档流元素被浮动元素覆盖，将普通文档流改为BFC,overflow:hidden
+    触发条件： 
+      浮动元素：float
+      绝对定位元素： position：absolute
+      行内块级元素
+      overflow 的值部位visible 表格单元格。
+3. 手写寄生组合式继承
+核心代码
+  function child(){
+    parent.call(this)
+    this.name = name | 'tom'
+  }
+  (function (){
+    var super = funtion(){}
+    super.prototype = parent.prototype
+    child.prototype = new super()
+  })()
+  写成函数的形式
+    function create(proto){
+      function F(){}
+      F.prototype = proto
+      return new F()
+    }
+    child.prototype = create(parent.prototype)
+4. 闭包解释：
+    函数在定义时以外的词法作用域被调用，内部函数能够访问到外部函数作用域中的变量，即使外部函数已经执行完毕
+    从闭包的使用例子来说：
+    1. 闭包的用途之一是实现对象的私有数据（设计模式当中的面向接口编程）
+    2. 在函数式编程中，闭包经常用于偏函数应用和柯里化
+    3. 回调函数和事件处理
+5. 跨域具体的实现
+    回答这个问题先从同源策略开始，同源是指：协议，域名，端口.限制了：cookie和LocalStorage 和IndexDB 的使用。DOM无法获得。AJAX请求不能发送。
+    如果有一个不一样就会出现跨域问题 同源策略 浏览器会拒绝请求（补充：其实不会拒绝，请求会发送出去，内容也已经返回了，但是在对返回的内容进行检查的时候浏览器会发现不是同域）
+      1. jsonp
+        优缺点：兼容性好，缺点是get请求。不安全容易受到xss攻击
+        百度搜索就是用的json去实现
+      2. CORS
+        优缺点：IE8以上都支持，支持所有类型的HTTP请求
+      3. document.domain + iframe跨域
+        主域相同，子域不同的应用场景
+      4. postMessage跨域
+        HTML5为了解决这个问题新增的一个API。window.postMessage方法，允许跨窗口通信，不论这两个窗口是否同源。
+      5. 使用nginx代理跨域
+  6. HTTP状态码
+      2xx（成功状态码）：200请求已正常处理，204请求处理成功但是没有资源可返回。206部分资源返回
+      3xx(重定向状态吗) ：301永久性重定向 ， 302临时性重定向 ，303和302功能差不多，只是它说明应该使用GET方法获取请求的资源。304请求带附加条件且服务器允许请求访问资源，但未满足条件的情况。虽然是3开头，但是和重定向没有关系
+      4xx(client Error客户端错误代码状态) ： 400 Bad request表示请求报文中存在语法错误，403 Forbidden请求资源的访问被服务器拒绝了，404，表明服务器上无法找到请求的资源 ，405客服端请求的方法虽然能被服务器识别，但是服务器禁止使用该方法。
+      5xx(服务器错误代码) ：500表明服务器在执行请求时发生错误，也有可能是web应用中存在的bug，5
+       服务器作为网关或代理，从上游服务器无法收到无效响应，503 服务器忙超载或维护停机，504，网关超时。505HTTP版本不受支持
+
