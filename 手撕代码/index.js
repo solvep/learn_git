@@ -37,3 +37,4 @@ function throttle(fn){
     canRUn = true
   },1000)
 }
+
