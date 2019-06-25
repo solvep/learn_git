@@ -70,3 +70,15 @@ in 常用来判断当前页面是否在移动端打开 isMobile = 'ontouchstart'
 很多人喜欢用ua，但不是很好的方法
 
 获取元素的样式：document.defaultView.getComputedStyle ： elem.currentStyle[property]
+
+
+6.24
+
+promise 有三种状态 pending：等待中，表示正在进行中还没得到结果。 resolved：已经完成，表示得到了我们想要的结果。rejected：也表示得到结果，但是结果并非我们所愿，因此拒绝执行。
+
+我们常常使用let来声明一个值会被改变的变量，而使用const来声明一个值不会被改变的变量，也可以成为常量。const objDev = { a: 20,b: 30} obDev.a = 30;
+解构 export { default } from './Button'
+函数默认参数：functino add(x =20,y =30);
+展开运算符 ... / arr1 = [1,2,3];
+const arr2 = [...arr1,10,20,30];
+和concat异曲同工，不会改变原数组。

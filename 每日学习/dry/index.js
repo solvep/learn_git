@@ -1,11 +1,17 @@
-var arr = new Array(6)
-arr[0] = "George"
-arr[1] = "John"
-arr[2] = "Thomas"
-arr[3] = "James"
-arr[4] = "Adrew"
-arr[5] = "Martin"
-console.log(arr + "<br />")
-let newA = arr.join('1111')
-console.log(arr + "<br />")
-console.log(newA)
+const obj1 = {
+    a: 1,
+    b: 2,
+    c: 3
+  }
+  
+  const obj2 = {
+    ...obj1,
+    d: 4,
+    e: 5,
+    f: 6
+  }
+  const obj2New = Object.assign({},obj1)
+  obj2New.a = 100 
+  console.log(obj1)
+  console.log(obj2)
+  console.log(obj2New)
