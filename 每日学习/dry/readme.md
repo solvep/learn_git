@@ -82,3 +82,87 @@ promise 有三种状态 pending：等待中，表示正在进行中还没得到�
 展开运算符 ... / arr1 = [1,2,3];
 const arr2 = [...arr1,10,20,30];
 和concat异曲同工，不会改变原数组。
+Object.assign({},obj1,obj2)
+
+ 压缩文件大小，cdn服务和与获取prefetching都是管理HTTP请求的最佳选择。
+ 预先获取：1.连接预先获取。2.DNS预先获取。3.预先渲染。
+ 当你离开当前页面之前，使用预先获取方式，对应每个连接的URL地址，css，图片和脚本都会被预先获取。只需要在网站HTML中的连接属性上增加rel=‘prefetch’，rel=‘dns-prefetch’，rel=‘prerender’。
+
+cdn内容分发网络，CDN允许您的网站访问者从最近的服务器加载数据。如果您使用CDN，您网站内的文件将自动压缩，以便在全球范围内快速分发。
+
+如果您不使用CDN，您也可以考虑在源服务器上使用文件压缩的方法来改进前端优化。
+文件压缩能使网站的内容轻量化，更易于管理。最常用的文件压缩方式之一是Gzip。着是缩小文档，音频文件，png图像等其他大文件的绝佳方法。现在facebook使用的是Brotli 
+
+大多数浏览器通常会限制url长度在2k个字节。而服务器最多处理64k大小的url。
+post和get 的区别。
+get：参数的url ，传输的大小
+post ：参数在 request body。
+
+URL， 统一资源定位符。
+scheme：//host.domain:port/path/filename
+scheme - 定义因特网的服务的类型。http，https，ftp，file。
+host- 定义域主机（http的默认主机是www）
+domain - 定义域名
+port - 端口号
+
+websocket 握手过程
+
+前端持久化的方式，区别。
+
+
+6.25 
+0.1 + 0.2 != 0.3 
+js采用的IEEE754双精度版本，我们都知道计算机标识十进制是采用二进制表示的，所以0.1在二进制表示为：0.1 = 2^-4 * 1.10011（0011）
+0.2 = 2^-3 *1.10011（0011）
+parseFloat((0.1+0.2).tofixed(10))
+toFixed() 方法使用定点表示法来格式化一个数值。
+parseFloat() 函数解析一个字符串参数并返回一个浮点数。
+
+十个 Ajax同时发送请求，全部返回展示结果，并且至多允许三次失败。
+promist.all 这个函数有一个局限，失败一次就返回了。
+思路：对失败的次数计数，失败次数大于3次就报错reject(error)
+
+基于LocalStorage 设计一个1M 的缓存系统，需要实现缓存淘汰机制。
+思路：
+1.每个对象需要添加两个属性：分别是过期时间和存储时间。
+2.利用一个属性保存系统中目前所占空间大小，每次存储都增加该属性，当属性值大于1M是，需要按照时间排序系统中的数据，删除一定量的数据保证能存储下目前需要存储的数据。
+3.每次取数据时，需要判断缓存数据是否国企，如果过期就删除。
+
+
+详细说明 event loop
+js是门非阻塞单线程语言，宏任务（jobs）微任务（task）
+微任务包括 process.nextTick ，promise ，Object.observe ，MutationObserver
+宏任务包括 script ， setTimeout ，setInterval ，setImmediate ，I/O ，UI rendering
+正确的一次Event loop
+1. 执行同步代码，着属于宏任务。
+2. 执行栈为空，查询是否有为任务需要执行。
+3. 执行所有微任务。
+4. 必要的话渲染UI
+5. 然后开始下一轮Event loop，执行宏任务中的异步代码。
+
+csrf跨站攻击：
+    跨域请求伪造，以用户的名字伪造请求发送给被攻击站点。
+    1. 验证token值
+    2. 验证HTTP头的Referer
+    3. 在HTTP头中自定义属性并验证。
+
+富文本的核心方法：contenteditable属性 和 document.execCommand方法。
+let range = window.getSelection().getRangeAt(0) 来获取选中内容信息
+
+6.26
+
+let const var的区别：1. 变量提升 ， 2.暂时性死区：如果代码块中有let const申明，一开始就形成了封闭作用域。凡是在申明之前使用这些变量都会报错。
+3.重复声明：在相同作用域内，重复声明同一个变量。4. 初始值：const声明是只读的常量，一旦声明就必须立即初始化，声明之后值不能改变。
+
+闭包：隐藏变量让别人不能直接访问，使用局部变量的话又访问不到
+
+三栏式，两栏式布局：圣杯：html结构更简单一点，div+3div。使用float和margin为负数加上position：relative。双飞翼布局：html复杂点，使用float和margin为负。使用绝对定位和相对定位结合使用。使用flex。flex-basis：1，flex：1配合使用。
+
+call和apply与bind的区别：call和apply改变了函数的this上下文
+call是一个一个传递，apply是以数组的方式
+作用：利用[].slice.call(argument)来将伪数组转化为数组。
+
+未知宽高水平垂直居中：
+1.使用position：absolute top.bottom,left,right=0,margin:auto;
+2.使用absolute ,top:50%,right:50%,结合transform：translate（-50%，-50%）
+3.使用disflex，flex，justify-content：center，align-item：center
