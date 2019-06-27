@@ -179,4 +179,13 @@ BFC布局规则：
 根元素，float属性不为none ，position为absolute或fixed。
 display：inline-block，flex。
 overflow不为visible。
-应用：两栏式布局的时候左边的元素为float：left，右边的正常显示的话会重叠，
+应用：
+1. 两栏式布局的时候左边的元素为float：left，右边的正常显示的话会重叠，
+这时候将右边的元素设置为BFC元素，
+2. 清楚内部浮动：当div内部有浮动元素时，设置为BFC时就能计算到浮动元素的高度。
+3. margin塌陷
+BFC就是页面上一个隔离的独立容器 ，容器里面的子元素不会影响到外面的元素，反之也是如此
+
+position：sticky 用来导航栏的布局，超酷
+
+Array.from将类数组转化或者对象，转化为数组，浅拷贝。
