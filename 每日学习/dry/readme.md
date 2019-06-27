@@ -166,3 +166,17 @@ call是一个一个传递，apply是以数组的方式
 1.使用position：absolute top.bottom,left,right=0,margin:auto;
 2.使用absolute ,top:50%,right:50%,结合transform：translate（-50%，-50%）
 3.使用disflex，flex，justify-content：center，align-item：center
+
+6.27
+代码一行一行敲，别粘贴复制，容易出错而且不易于以后的更改。
+
+BFC：块级格式化上下文。他是一个独立的渲染区域，与外部毫不相干。
+BFC布局规则：
+1. 内部的box会在垂直方向，一个接一个地放置。
+2. box垂直方向的距离由margin决定。属于同一个BFC的两个相邻Box的margin会发生重叠。
+3. BFC的区域不会与float box重叠。
+4. BFC的高度，浮动元素也参与计算。
+根元素，float属性不为none ，position为absolute或fixed。
+display：inline-block，flex。
+overflow不为visible。
+应用：两栏式布局的时候左边的元素为float：left，右边的正常显示的话会重叠，
