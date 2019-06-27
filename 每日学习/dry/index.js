@@ -1,11 +1,83 @@
-var arr = new Array(6)
-arr[0] = "George"
-arr[1] = "John"
-arr[2] = "Thomas"
-arr[3] = "James"
-arr[4] = "Adrew"
-arr[5] = "Martin"
-console.log(arr + "<br />")
-let newA = arr.join('1111')
-console.log(arr + "<br />")
-console.log(newA)
+async 
+function
+ async1() {
+
+        console.log( 
+'async1 start'
+ )
+
+        await async2()
+
+        console.log( 
+'async1 end'
+ )
+
+    }
+
+
+
+    async 
+function
+ async2() {
+
+        console.log( 
+'async2'
+ )
+
+    }
+
+
+
+    console.log( 
+'script start'
+ )
+
+
+
+    setTimeout( 
+function
+ () {
+
+        console.log( 
+'setTimeout'
+ )
+
+    }, 
+0
+ )
+
+
+
+    async1();
+
+
+
+    
+new
+ 
+Promise
+( 
+function
+ ( resolve ) {
+
+        console.log( 
+'promise1'
+ )
+
+        resolve();
+
+    } ).then( 
+function
+ () {
+
+        console.log( 
+'promise2'
+ )
+
+    } )
+
+
+
+    console.log( 
+'script end'
+ )

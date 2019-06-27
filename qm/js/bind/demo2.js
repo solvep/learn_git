@@ -11,7 +11,7 @@ Function.prototype.bind2 = function(context) {
       // this
     //   console.log(arguments)
       var bindArgs = Array.prototype.slice.call(arguments);
-      console.log(args.concat(bindArgs))
+      // console.log(args.concat(bindArgs))
       self.apply(context,args.concat(bindArgs));
     }
   }
