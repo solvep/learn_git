@@ -233,3 +233,4 @@ bom： window：alert() 根本对象是window
     some和every方法的区别
     没面完就没拉去谈需求了
 
+7.4
