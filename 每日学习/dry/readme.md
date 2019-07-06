@@ -189,3 +189,5 @@ BFC就是页面上一个隔离的独立容器 ，容器里面的子元素不会�
 position：sticky 用来导航栏的布局，超酷
 
 Array.from将类数组转化或者对象，转化为数组，浅拷贝。
+
+ServiceWorkers:
