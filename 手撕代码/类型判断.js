@@ -3,8 +3,13 @@ function type(elem) {
         return elem + '';
     }
     return toString.call(elem).replace(/[\[\]]/g, '').split(' ')[1].toLowerCase();
+    return toString.call(elem).replace(/[\[\]]/g, '').split(' ')[1].toLowerCase();
 }
-console.log(type(undefined))
+var isType = function (obj) {
+    return toString.call(obj).slice(8,-1);
+}
+toString.call(elem).slice(8,-1);
+console.log(isType(undefined))
 console.log(typeof null)
 
 function type(elem) {

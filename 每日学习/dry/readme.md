@@ -36,8 +36,11 @@ call() , apply() call是一个一个的传递，apply是以数组的形式传递
 
 6.23
 纯函数：相同的输入总会得到相同的输出，并且不会产生副作用的函数，就是纯函数
-数组的操作，会改变原数组：pop,shift,push,unshift,sort,reverse,splice
-不会改变原数组：concat,slice,join,split,toString/
+数组的操作，会改变原数组：pop,shift,push,unshift,sort,reverse,splice,forEach
+不会改变原数组：concat,slice,join,split,toString,filter,map,
+some:只要有一个callback返回true则返回true
+every：每一个都返回true才返回true
+indexOf：不符合条件返回-1。其他数则为符合
 回文判断：split->字符串到数组，join->数组到字符串，reverse->数组倒置
 slice 类数组转化为数组
 
@@ -190,4 +193,48 @@ position：sticky 用来导航栏的布局，超酷
 
 Array.from将类数组转化或者对象，转化为数组，浅拷贝。
 
+<<<<<<< HEAD
 ServiceWorkers:
+=======
+6.29
+适合事件委托的事件：click，mousedown,mouseup,keydown,keyup,keypress
+e = e || window.event, e.target || e.srcElement, e.nodeName.toLowCase() == 'li'
+
+https://github.com/yonyouyc/blog/issues/25
+
+6.30 
+async：https://segmentfault.com/a/1190000007535316
+Even loop：https://segmentfault.com/a/1190000012806637
+setTimeout：需要满足时间到了和主线程空闲
+
+7.1
+iframe缺点:
+1. 会阻塞主页面的Onload事件
+2. 搜索引擎的检索程序无法解读这种页面，不利于SEO
+3. iframe和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载
+4. 如果需要使用iframe，最好是通过javascript动态给iframe添加src属性值，这样可以绕开以上两个问题
+
+<!DOCTYPE html>：
+声明位于文档中的最前面，处于html标签之前，告诉浏览器的解析器，用什么文档类型规范来解析这个文档
+
+7.2
+animation是css3新增的动画属性，这个css3动画的每一帧是由@keyframes来声明的
+keyftames声明了动画的名称，通过from，to或者是百分比来定义
+作用域：收集维护声明的标识符，确定当前执行代码对这些变量的访问权限。
+作用域链：保证执行环境里有权访问的标识符是有序的
+平安科技壹钱包：
+    1. DOM和BOM举例：dom是document  
+bom： window：alert() 根本对象是window
+    history：history.go(1)
+    document：
+    location：url的信息
+    navigator：浏览器的信息
+    screen：屏幕信息
+
+    fliter方法
+    assign方法
+    some和every方法的区别
+    没面完就没拉去谈需求了
+
+7.4
+>>>>>>> 4dcec2963d7c7b9ed9b2acdc5835781a86b82393
