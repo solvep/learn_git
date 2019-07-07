@@ -234,3 +234,8 @@ bom： window：alert() 根本对象是window
     没面完就没拉去谈需求了
 
 7.4
+怎么判断两个对象相等 
+转化为字符串：JSON.stringify() JSON.parse()
+避免src为空
+requestAnimationFrame
+createDocumentFrame
