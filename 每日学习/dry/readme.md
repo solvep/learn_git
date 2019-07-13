@@ -36,13 +36,12 @@ call() , apply() call是一个一个的传递，apply是以数组的形式传递
 
 6.23
 纯函数：相同的输入总会得到相同的输出，并且不会产生副作用的函数，就是纯函数
-数组的操作，会改变原数组：pop,shift,push,unshift,sort,reverse,splice,forEach
+数组的操作，会改变原数组：pop,shift,push,unshift,sort,reverse,splice:,forEach
 不会改变原数组：concat,slice,join,split,toString,filter,map,
 some:只要有一个callback返回true则返回true
 every：每一个都返回true才返回true
 indexOf：不符合条件返回-1。其他数则为符合
 回文判断：split->字符串到数组，join->数组到字符串，reverse->数组倒置
-slice 类数组转化为数组
 
 颗粒化是指这样一个函数，他接收函数A作为参数，运行后能返回一个新的函数。并且这个新的函数能够处理函数A的剩余参数。
 
@@ -98,7 +97,7 @@ cdn内容分发网络，CDN允许您的网站访问者从最近的服务器加�
 
 大多数浏览器通常会限制url长度在2k个字节。而服务器最多处理64k大小的url。
 post和get 的区别。
-get：参数的url ，传输的大小
+get：参数在url ，传输的大小
 post ：参数在 request body。
 
 URL， 统一资源定位符。
@@ -193,9 +192,7 @@ position：sticky 用来导航栏的布局，超酷
 
 Array.from将类数组转化或者对象，转化为数组，浅拷贝。
 
-<<<<<<< HEAD
 ServiceWorkers:
-=======
 6.29
 适合事件委托的事件：click，mousedown,mouseup,keydown,keyup,keypress
 e = e || window.event, e.target || e.srcElement, e.nodeName.toLowCase() == 'li'
@@ -236,5 +233,9 @@ bom： window：alert() 根本对象是window
     some和every方法的区别
     没面完就没拉去谈需求了
 
-7.4
->>>>>>> 4dcec2963d7c7b9ed9b2acdc5835781a86b82393
+7.6
+json.stringify和json.pasInt
+怎么区分一个方法是es5还是es6
+7.13
+类数组转化为数组：Array.from() 和 [...arr]
+回纹判断：将字符串转化为数组split('').reverse().join('-')
