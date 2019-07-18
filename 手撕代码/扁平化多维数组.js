@@ -1,5 +1,9 @@
 let c=[1,3,4,5,[6,[0,1,5],9],[2,5,[1,5]],[5]];
-// console.log(c.toString().split(',').map((item)=>+item))
+console.log(c.toString().split(',').map((item)=>+item))
+
+
+let str = '456132'
+console.log(str.split('').reverse().join(''))
 
 function fliter(arr){
     var res = [];
@@ -12,12 +16,22 @@ function fliter(arr){
     }
     return res;
 }
-console.log(fliter(c))
-
 function flatten(arr){
     return arr.reduce((pre,item)=>{
-        return pre.concat(Array.isArray(item) ? flatten(item):item)
+        return pre.concat(Array.isArray(item) ? flatten(item) :item)
     },[])
 }
+let c=[1,3,4,5,[6,[0,1,5],9],[2,5,[1,5]],[5]];
+function reducer(arr){
+    if(arr instanceof Array){
+        return arr.reduce((acc,val) =>{
+            return acc.concat(Array.isArray(val) ? reducer(val) : val)
+    },[])
+    } else {
+        return new Error('must Array type')
+    }
+    
+}
 
-console.log(flatten(c))
+console.log(reducer(c))
+console.log(c)

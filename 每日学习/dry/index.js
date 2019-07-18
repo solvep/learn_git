@@ -1,3 +1,11 @@
-let arr = [1,2,3,4,5,6,7,8,9,10];
-arr.sort(()=>Math.random() - 0.5)
-console.log(arr)
+var a = 10;
+var obj = {
+    a: 20
+}
+
+function fn () {
+    this = obj;
+    console.log(this.a);
+}
+
+fn();

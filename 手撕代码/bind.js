@@ -1,13 +1,12 @@
 Function.prototype.mybind =function (context) {
-    var me = this;
+    var self = this;
     var args = Array.prototype.slice.call(arguments, 1);
     var F = function () {};
     F.prototype = this.prototype;
     var bound = function () {
         var innerArgs = Array.prototype.slice.call(arguments);
         var finalArgs = args.concat(innerArgs);
-        console.log('bound',this)
-        return me.apply(this instanceof F ? this : context || this, finalArgs);
+        return self.apply(this instanceof F ? this : context || this, finalArgs);
     }
     bound.prototype = new F();
     return bound;
