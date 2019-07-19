@@ -10,19 +10,17 @@
     <input id="input">
 </body>
     <script>
-        let data = {
-            text:112
-        };
-        const inp = document.getElementById('input');
-        Object.defineProperty(data,'',{
-            set:(value)=>{
-                inp.value = value
-                this.value = value
+        const data = {
+            text:123
+        }
+        Object.defineProperty(data,data.text,{
+            set:(value) =>{
+                this.value = value;
+                data.text = value;
             }
         })
-        inp.onchange = (e)=>{
-            data.text = e.target.value
-            console.log(data)
+        document.getElementById('input').onchange = (e)=>{
+            data.text = e.target.value;
         }
     </script>
 </html>

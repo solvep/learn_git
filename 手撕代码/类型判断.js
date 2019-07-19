@@ -40,3 +40,5 @@ let elem =[]
 console.log(toString.call(elem).replace(/[\[\]]/g,'').split(' ')[1].toLowerCase())
 
 toString.call(elem).replace(/[\[\]]/g,'').split(' ').toLowerCase()
+
+Object.prototype.toString(elem).replace(/[\[\]]/g,'').split('')[1].toLowerCase();

@@ -3,16 +3,23 @@
 // 2. 该对象可以访问到构造函数原型链上的属性或函数obj._proto_ = Con.prototype
 // 3. 这个对象也就是构造函数的this 可以访问到挂载在this上的任意属性
 // 4. 返回原始值需要忽略，确保返回的是对象。
-function create(con,...arguments){
+function create(con,...args){
     //创建一个对象
     let obj = {};
     //连接到原型
     Object.setPrototypeOf(obj,con.prototype);
     //绑定this执行构造函数
-    let result = con.apply(obj,arguments);
+    let result = con.apply(obj,...args);
     //确保new出来是个对象。
     return result instanceof Object ? result : obj 
   }
+function create(con,...args){
+  let obj = {};
+  // Object.setPrototypeOf(obj,con.prototype)
+  obj._proto_ = con.prototype;
+  let result = con.call(obj,...args);
+  return result instanceof Object ? result : obj;
+}
   function Preson(name,age){
     this.name = name;
     this.age = age;
