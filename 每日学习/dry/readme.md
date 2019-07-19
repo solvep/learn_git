@@ -38,7 +38,7 @@ call() , apply() call是一个一个的传递，apply是以数组的形式传递
 纯函数：相同的输入总会得到相同的输出，并且不会产生副作用的函数，就是纯函数
 数组的操作，
 会改变原数组：pop,shift,push,unshift,sort,reverse,splice,forEach
-不会改变原数组：concat,slice,join,toString,filter,map,
+不会改变原数组：concat,slice,join,toString,filter,map,reduce
 some:只要有一个callback返回true则返回true
 every：每一个都返回true才返回true
 indexOf：不符合条件返回-1。其他数则为符合
