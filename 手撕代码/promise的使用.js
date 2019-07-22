@@ -7,3 +7,7 @@ promise.then((data) =>{
 },(error) =>{
     console.log(error)
 })
+
+console.log([].every(()=>{
+   
+}))
