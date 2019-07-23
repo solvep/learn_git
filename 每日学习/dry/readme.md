@@ -289,3 +289,9 @@ json.stringify和json.pasInt
 7.13
 类数组转化为数组：Array.from() 和 [...arr]
 回纹判断：将字符串转化为数组split('').reverse().join('-')
+
+7.23
+空格：后代
+> : 子代
+~ ：后继
++ ：直接后继

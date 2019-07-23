@@ -18,5 +18,6 @@
            o.appendChild(a), 
            n.appendChild(o), 
            1 === a.offsetHeight && n.classList.add("hairlines"), 
-           n.removeChild(o) } 
+           n.removeChild(o) 
+        } 
     }(window, document)
