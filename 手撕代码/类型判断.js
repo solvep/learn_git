@@ -3,7 +3,6 @@ function type(elem) {
         return elem + '';
     }
     return toString.call(elem).replace(/[\[\]]/g, '').split(' ')[1].toLowerCase();
-    return toString.call(elem).replace(/[\[\]]/g, '').split(' ')[1].toLowerCase();
 }
 var isType = function (obj) {
     return toString.call(obj).slice(8,-1);

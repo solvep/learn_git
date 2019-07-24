@@ -3,7 +3,7 @@ function debounce(fn,time){
   return () => {
     clearTimeout(timeout);
     timeout = setTimeout(()=>{
-      let arg = [...arguments].slice().splice(0,2);
+      let arg = [...arguments].splice(2);
       console.log(arg)
       fn.call(this,...arg)
     },time)
