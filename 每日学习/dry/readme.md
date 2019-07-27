@@ -35,8 +35,9 @@ call() , apply() call是一个一个的传递，apply是以数组的形式传递
 
 6.23
 纯函数：相同的输入总会得到相同的输出，并且不会产生副作用的函数，就是纯函数
-数组的操作，会改变原数组：pop,shift,push,unshift,sort,reverse,splice:,forEach
-不会改变原数组：concat,slice,join,toString,filter,map,
+数组的操作，
+会改变原数组：pop,shift,push,unshift,sort,reverse,splice,forEach
+不会改变原数组：concat,slice,join,toString,filter,map,reduce
 some:只要有一个callback返回true则返回true
 every：每一个都返回true才返回true
 indexOf：不符合条件返回-1。其他数则为符合
@@ -233,9 +234,64 @@ bom： window：alert() 根本对象是window
     some和every方法的区别
     没面完就没拉去谈需求了
 
+7.4
+怎么判断两个对象相等 
+转化为字符串：JSON.stringify() JSON.parse()
+避免src为空
+requestAnimationFrame
+createDocumentFrame
+
+7.12
+width = device-width
+
+7.15
+css 里面的单位：px，rem，em，vh，vw，s，deg
+父关系：
+parentElement:返回元素的父元素节点
+parentNOde：返回元素的父元素节点，必须是Element元素
+子关系：
+childNodes：返回一个实时的Nodelist，表示元素的子节点列表。
+firstChild：第一个子节点，firstElementChild
+lastChild：最后一个子节点，lastElementChild
+兄弟节点：
+previousSibling：节点的前一个节点previous
+nextSibling:
+setAttribute
+getAttribute
+dataset
+var json = '{"a":"1", "b":2}';
+var obj = eval("(" + json + ")")
+
+7.17
+promise 的状态是不可逆的pendding，fulfilled，rejected
+使用then是返回一个新的promise实例
+all方法将多个promise实例，包装成一个新的promise实例
+只有当promise返回的都是fulfill才是fulfill
+只要有一个是rejected，p的状态就会变成rejected
+react的生命周期
+    componentWillMount
+    render
+    componentDidMount
+    state改变shouldcomponentwillMount
+    props改变 componentWillReciveProps
+    componentWillupdate()
+    render()
+    componentDidUpdate
+    componentWillUnmount
+keyframe 搭配 animation
+
+for in遍历的是数组的key不合适
+for of遍历的是数组元素值
+hasOwnProperty
 7.6
 json.stringify和json.pasInt
 怎么区分一个方法是es5还是es6
 7.13
 类数组转化为数组：Array.from() 和 [...arr]
 回纹判断：将字符串转化为数组split('').reverse().join('-')
+
+7.23
+空格：后代
+> : 子代
+~ ：后继
++ ：直接后继

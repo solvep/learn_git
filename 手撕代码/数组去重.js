@@ -18,6 +18,45 @@ function unqiue1(arr){
     }
     return arr;
 }
-console.log(unqiue1(arr))
 
-console.log([...arr])
+// 利用indexof
+var array = [1, 1, '1', '1'];
+function  unqiue2(arr){
+    let newArr = [];
+    for (let i = 1 ; i < arr.length ; i++){
+        if(newArr.indexOf(arr[i]) === -1){
+            newArr.push(arr[i])
+        }
+    }
+    return newArr;
+}
+console.log(unqiue2(array))
+
+console.log(Array.from(new Set(array)))
+console.log([...new Set(array)])
+
+console.log([...array])
+
+// 利用filter
+var array = [1, 1, '1', '1'];
+function unqiue3(arr){
+    let res = arr.filter((item,index) =>{
+        return arr.indexOf(item) === index;
+    })
+    return res;
+}
+console.log(unqiue3(array))
+
+console.log(Array.from(new Set(array))) 
+
+function unqiue9(arr){
+    if(newArr.indexOf(arr) === -1){
+        push
+    }
+}
+
+
+arr.filter((item,index) =>{
+    return arr.indexOf(item) === index
+})
+

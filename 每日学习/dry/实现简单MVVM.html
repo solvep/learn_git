@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input">
+</body>
+    <script>
+        const data = {
+            text:123
+        }
+        Object.defineProperty(data,data.text,{
+            set:(value) =>{
+                this.value = value;
+                data.text = value;
+            }
+        })
+        document.getElementById('input').onchange = (e)=>{
+            data.text = e.target.value;
+        }
+    </script>
+</html>

@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+<style>
+  .wrap{
+    width:100px;
+    height: 100px;
+  }
+</style>
+</head>
+<body>
+  
+  <div id="box">
+    <i class="icon">a</i>
+    <i class="icon">b</i>
+    <i class="icon">c</i>
+  </div>
+  <script>
+    const box = document.getElementById('box')
+    isIcon = (target) => {
+      return target.className.includes('icon')
+    }
+    box.onclick = (e) =>{
+      e.stopPropagation()
+      let target = e.target
+      if(isIcon(target)){
+        target.style.border = '1px solid red'
+      }
+    }
+    const doc = document
+    doc.onclick = (e) =>{
+      e.stopPropagation()
+      let ele = box.children
+      for(let i =0;i<ele.length;i++){
+        if(isIcon(ele[i])){
+          ele[i].style.border = 'none'
+        }
+      }
+    }
+  </script>
+</body>
+</html>

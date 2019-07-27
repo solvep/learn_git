@@ -58,7 +58,9 @@ class myPromise{
 const sleep = (timeountMS) => new Promise((resolve) => {
     setTimeout(resolve, timeountMS);
 });
-
+const sleep =  (time) => new Promise((resolve)=>{
+    setTimeout(resolve,time)
+})
 (async () => {  // 声明即执行的 async 函数表达式
     for (var i = 0; i < 5; i++) {
         await sleep(1000);
@@ -68,3 +70,4 @@ const sleep = (timeountMS) => new Promise((resolve) => {
     await sleep(1000);
     console.log(new Date, i);
 })();
+https://zachrey.cn/2018/10/27/promise-%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E4%B8%8E%E5%AE%9E%E7%8E%B0/
