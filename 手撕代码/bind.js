@@ -22,3 +22,11 @@ var bound = original.mybind(obj, 1);
 console.log(bound.prototype)
 var newBoundResult = new bound(2);
 console.log(newBoundResult, 'newBoundResult'); // original {name: 2}
+
+function call(content = window){
+    content.fn = this;
+    let args = [...arguments].slice(1)
+    let result = content.fn(...args);
+    delete content.fn;
+    return result;
+}

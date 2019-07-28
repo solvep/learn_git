@@ -1,3 +1,5 @@
+import { promises } from "dns";
+
 // https://zachrey.cn/2018/10/27/promise-%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E4%B8%8E%E5%AE%9E%E7%8E%B0/
 // 1. 首先，constructor是必须的
     // - 初始化状态
@@ -61,6 +63,10 @@ const sleep = (timeountMS) => new Promise((resolve) => {
 const sleep =  (time) => new Promise((resolve)=>{
     setTimeout(resolve,time)
 })
+const sleep = (time) => new Promise((resolve) =>{
+    setTimeout(resolve,time)
+})
+const sleep = (time) =>new promise((resolve) => setTimeout(resolve,time))
 (async () => {  // 声明即执行的 async 函数表达式
     for (var i = 0; i < 5; i++) {
         await sleep(1000);
@@ -71,3 +77,17 @@ const sleep =  (time) => new Promise((resolve)=>{
     console.log(new Date, i);
 })();
 https://zachrey.cn/2018/10/27/promise-%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E4%B8%8E%E5%AE%9E%E7%8E%B0/
+var a = 1;
+var b = {
+  a : 2,
+  d : function (){
+      this.a = 2;
+    (function (){
+      console.log(this.a,'1')
+    //   this.a = 3;
+    })()
+    console.log(this.a,'2')
+  }
+}
+console.log(a,'3')
+b.d()

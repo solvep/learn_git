@@ -1,9 +1,6 @@
 let c=[1,3,4,5,[6,[0,1,5],9],[2,5,[1,5]],[5]];
 console.log(c.toString().split(',').map((item)=>+item))
-
-
-let str = '456132'
-console.log(str.split('').reverse().join(''))
+console.log(c.toString().split(',').map((item) =>+item))
 
 function fliter(arr){
     var res = [];
@@ -35,3 +32,26 @@ function reducer(arr){
 
 console.log(reducer(c))
 console.log(c)
+var arr = [ [1, 2, 2], [3, 4, 5, 5], [6, 7, 8, 9, [11, 12, [12, 13, [14] ] ] ], 10];
+function filter(arr){
+    if(typeof arr !== 'object' || arr == null){
+        return new Error('must Array type')
+    }
+    let newArr =  [...new Set(arr.reduce((acc,item)=>{
+        return acc.concat(Array.isArray(item) ? filter(item) : item)
+    },[]))]
+    newArr.sort((a,b)=>{
+        return a-b
+    })
+    return newArr
+}
+console.log([...new Set(filter(arr))])
+
+function buildUrl(){
+    var qs = "?debug=true"
+    with(location){
+        var url = href + qs
+    }
+    return url;
+}
+console.log(buildUrl())
