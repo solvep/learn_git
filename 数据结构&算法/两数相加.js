@@ -22,7 +22,7 @@ function stringToList(str){
     let arr = str.split('');
     let listNode = new NodeList(arr.shift());
     return arr.reduce((ori,cur)=>{
-        let ln = new ListNode(cur)
+        let ln = new NodeList(cur)
         ln.next = ori
         return ln
     },listNode)

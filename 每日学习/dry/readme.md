@@ -28,7 +28,6 @@ this : window}
 作用域与执行上下文是完全不同的两个概念。我知道很多人会混淆他们，但是一定要仔细区分。
 js代码的整个执行过程，分为两个阶段，代码编译阶段与代码执行阶段。编译阶段由编译器完成，将代码翻译成可执行 代码，这个阶段作用域规则会确定。执行阶段由引擎完成，主要任务是执行可执行代码。执行上下文在这个阶段创建。
 
-
 作用域链式由当前环境与上层环境的一系列变量对象组成，它保证了当前执行环境对符合访问权限的变量和函数的有序访问。
 this的指向是在函数被调用的时候确定的。
 在函数执行过程中，this一旦被确定就不可更改了。
@@ -51,6 +50,7 @@ indexOf：不符合条件返回-1。其他数则为符合
     return function(){
         clearTimeout(timeout);
         timeout = setTimeout(()=>{
+            let args = [...argument].splice(0,2)
             fn.call(this,...argument)
         },time)
     }
@@ -65,7 +65,7 @@ indexOf：不符合条件返回-1。其他数则为符合
     canRun = false
     setTimeout(()=>{
         canRun = true
-        fn.call(this,argument)
+        fn.call(this,[...argument].slice(1))
     },time)
 }
 
