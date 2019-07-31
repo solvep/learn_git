@@ -26,3 +26,12 @@ let arr = [5,4,1,4,5]
     return arr[0]
   }
 console.log(singleNumber(arr))
+
+const sleep = (time) => {
+  return new Promise(resolve => {console.log('qwe');setTimeout(resolve, time)})
+}
+
+sleep(1000).then(() => {
+    // 这里写你的骚操作
+    console.log('qweqwe')
+})

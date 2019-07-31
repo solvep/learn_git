@@ -295,4 +295,10 @@ json.stringify和json.pasInt
 > : 子代
 ~ ：后继
 + ：直接后继
-    
+7.30
+ajax：使用原声js还是比较繁琐的，在实际工程中一般会是哦也能够jq之类的库，封装ajax请求方法非常好用，且解决了浏览器兼容性的问题。
+axios:不是一种新技术，是一个基于Promise用于浏览器和HTTP客户端，本质上也是对原声XHR的封装，只不过它是Promise的实现版本。
+fetch：提供了一个js接口，用于访问和操纵HTTP管道的部分，例如请求和响应。提供了一个全局的fetch()方法。使用fetch的时候需要注意：
+1. 当接受到一个代表错误的HTTP状态码时，从fetch返回的promise不会被标记为reject，即使该HTTP响应的状态码时404，500。相反，它会将Promise状态标记为resolve（但是resolve的返回值的ok属性设置为false），仅当网络故障时或请求被阻止时，才会标记为reject。
+2. 默认情况下，fetch不会从服务端发送或接受任何cookies，如果站点依赖于用户的session则会导致未经认证的请求，
+fetch代表着更先进的技术方向，但是目前兼容性不是很好，在项目中使用的时候得慎重。
