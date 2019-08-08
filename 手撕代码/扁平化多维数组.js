@@ -32,8 +32,7 @@ function reducer(arr){
     },[])
     } else {
         return new Error('must Array type')
-    }
-    
+    }   
 }
 
 console.log(reducer(c))
