@@ -34,6 +34,7 @@ class myPromise{
         reject = (data) =>{
             setTimeout(() =>{
                 if(this.status !== PENDING) return
+                
                 this.data = data
                 this.status = REJECTED
                 let currentCallback

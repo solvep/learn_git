@@ -1,0 +1,15 @@
+{
+  "name": "llj-pack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "llj-pack": "./bin/llj-pack.js"
+  },
+  "dependencies": {
+    "@babel/generator": "^7.5.5",
+    "@babel/traverse": "^7.5.5",
+    "@babel/types": "^7.5.5",
+    "babylon": "^6.18.0"
+  }
+}

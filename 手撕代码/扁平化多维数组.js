@@ -16,6 +16,7 @@ function fliter(arr){
     }
     return res;
 }
+
 function flatten(arr){
     return arr.reduce((pre,item)=>{
         return pre.concat(Array.isArray(item) ? flatten(item) :item)

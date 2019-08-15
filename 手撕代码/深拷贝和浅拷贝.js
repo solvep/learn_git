@@ -40,3 +40,17 @@ let arr = [5,4,1,4,5]
     return arr[0]
   }
 console.log(singleNumber(arr))
+
+
+const obj1 = {
+  name : 1,
+  fun1 : () =>{
+    var name = 1;
+    setTimeout(()=>{
+      console.log(this)
+    })
+    console.log(this);
+  }
+}
+
+obj1.fun1();
