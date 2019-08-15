@@ -25,6 +25,7 @@
 </style>
 <body>
      <div>&lt;div&gt;</div>
+     <button id="button">点击变色</button>
         <ul class="Article">
                 <li class="js-article-item">
                   <p>
@@ -43,5 +44,35 @@
                 </li>
               </ul>
 </body>
+<script>
+function Button(id) {
+    this.element = document.querySelector("#" + id);
+    this.bindEvent();
+}
 
+Button.prototype.bindEvent = function() {
+  console.log(this)
+    this.element.addEventListener("click", this.setBgColor, false);
+};
+
+Button.prototype.setBgColor = function() {
+  console.log(this)
+    this.element.style.backgroundColor = '#1abc9c'
+};
+
+var button = new Button("button");
+var a = 1;
+var b = {
+  a : 2,
+  d : function (){
+    (function (){
+      this.a = 3;
+      console.log(this.a)
+    })()
+    console.log(this.a)
+  }
+}
+console.log(a)
+b.d()
+</script>
 </html>

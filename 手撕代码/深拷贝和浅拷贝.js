@@ -1,6 +1,5 @@
 // 深拷贝
 function deepClone(elem){
-
     if(typeof elem !== 'object' || elem == null){
         return new Error('must object type');
     }
@@ -13,24 +12,11 @@ function deepClone(elem){
     return newObj;
 }
 
-let elem = {1:[123,'asd'] , 2:2 , a:'s', df:'p'};
+let elem = {1:[123,'asd'], 2:2 , a:'s', df:'p'};
 let lel = deepClone(elem)
+
 lel[1] = 'asdfsd'
 console.log(lel,elem)
-
- function deepClone (elem){
-    if(typeof elem !== 'object' || elem == null){
-        return new Error('must object type')
-    }
-    let newElem = elem instanceof Array ? []: {}
-    for(let key in elem){
-        if(elem.hasOwnProperty(key)){
-            newElem[key] = typeof elem[key] === 'object' ? deepClone(elem[key]) : elem[key]
-        }
-    }
-    return newElem;
- }
-console.log(5 ^= 3)
 
 let arr = [5,4,1,4,5]
  function singleNumber(arr){
@@ -41,6 +27,7 @@ let arr = [5,4,1,4,5]
   }
 console.log(singleNumber(arr))
 
+<<<<<<< HEAD
 
 const obj1 = {
   name : 1,
@@ -54,3 +41,13 @@ const obj1 = {
 }
 
 obj1.fun1();
+=======
+const sleep = (time) => {
+  return new Promise(resolve => {console.log('qwe');setTimeout(resolve, time)})
+}
+
+sleep(1000).then(() => {
+    // 这里写你的骚操作
+    console.log('qweqwe')
+})
+>>>>>>> 4e8fb41b75d486e7e95c28f2ec50948b11977d24
