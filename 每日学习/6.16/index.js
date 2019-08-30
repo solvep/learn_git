@@ -15,7 +15,7 @@
 var fn;
 function foo() {
     var a = 2;
-    function baz() {
+    function baz () {
         console.log( a );
     }
     fn = baz;
