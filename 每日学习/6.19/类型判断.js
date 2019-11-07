@@ -7,4 +7,4 @@ function type(elem) {
 
 console.log(type([]));
 console.log((toString.call([]).replace(/[\[\]]/g, '')));
-console.log( 'apple people'.split(''))
+console.log( 'apple people'.split(' '))

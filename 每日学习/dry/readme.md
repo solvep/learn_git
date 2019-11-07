@@ -87,9 +87,9 @@ const arr2 = [...arr1,10,20,30];
 和concat异曲同工，不会改变原数组。
 Object.assign({},obj1,obj2)
 
- 压缩文件大小，cdn服务和与获取prefetching都是管理HTTP请求的最佳选择。
- 预先获取：1.连接预先获取。2.DNS预先获取。3.预先渲染。
- 当你离开当前页面之前，使用预先获取方式，对应每个连接的URL地址，css，图片和脚本都会被预先获取。只需要在网站HTML中的连接属性上增加rel=‘prefetch’，rel=‘dns-prefetch’，rel=‘prerender’。
+压缩文件大小，cdn服务和与获取prefetching都是管理HTTP请求的最佳选择。
+预先获取：1.连接预先获取。2.DNS预先获取。3.预先渲染。
+当你离开当前页面之前，使用预先获取方式，对应每个连接的URL地址，css，图片和脚本都会被预先获取。只需要在网站HTML中的连接属性上增加rel=‘prefetch’，rel=‘dns-prefetch’，rel=‘prerender’。
 
 cdn内容分发网络，CDN允许您的网站访问者从最近的服务器加载数据。如果您使用CDN，您网站内的文件将自动压缩，以便在全球范围内快速分发。
 
@@ -191,7 +191,7 @@ BFC就是页面上一个隔离的独立容器 ，容器里面的子元素不会�
 
 position：sticky 用来导航栏的布局，超酷
 
-Array.from将类数组转化或者对象，转化为数组，浅拷贝。
+Array.from将类数组或者对象，转化为数组，浅拷贝。
 
 ServiceWorkers:
 6.29
