@@ -13,7 +13,7 @@
     </style>
   </head>
   <body>
-    <div class="parent">
+    <!-- <div class="parent">
     <div class="child-1">
       <div class="child-1-1">
         <div class="child-1-1">a</div>
@@ -74,6 +74,30 @@
             return nodes;
         }
         console.log(widthTraver(node))
-    </script>
+    </script> -->
+    <div class="container">
+      <div class="left"></div>
+      <div class="right"></div>
+  </div>
+  
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    .container {
+      width: 600px;
+      height: 300px;
+      display: flex;
+    }
+    .left {
+      flex: 1 2 600px;
+      background: red;
+    }
+    .right {
+      flex: 2 1 400px;
+      background: blue;
+    }
+  </style>
   </body>
 </html>
