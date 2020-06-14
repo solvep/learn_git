@@ -1,0 +1,8 @@
+.multiline-ellipsis(@n) {
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: @n; //需要显示的行数
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }

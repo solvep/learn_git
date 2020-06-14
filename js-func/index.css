@@ -1,0 +1,375 @@
+.box {
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: #f8f8f8;
+    width: 750px;
+    height: 1623px;
+  }
+  .box .hd {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 750px;
+    height: 176px;
+  }
+  .box .outer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 35px;
+  }
+  .box .mark {
+    margin-left: 48px;
+    width: 50px;
+    height: 22px;
+  }
+  .box .label {
+    margin-left: 490px;
+    width: 34px;
+    height: 22px;
+  }
+  .box .huiyuan {
+    margin-left: 9px;
+    width: 30px;
+    height: 22px;
+  }
+  .box .wrap {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 11px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2.666666746139526px;
+    border-color: rgba(0,0,0,0.35);
+    padding-right: 5px;
+    padding-left: 4px;
+    height: 23px;
+  }
+  .box .color {
+    border-radius: 1.333333373069763px;
+    background-color: #000000;
+    width: 36px;
+    height: 15px;
+  }
+  .box .dot {
+    margin-top: 7px;
+    margin-left: 2px;
+    width: 3px;
+    height: 8px;
+  }
+  .box .block_2 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 42px;
+  }
+  .box .left {
+    margin-left: 32px;
+    width: 18px;
+    height: 34px;
+  }
+  .box .shopTitle {
+    margin-top: 8px;
+    margin-left: 257px;
+    width: 136px;
+    height: 48px;
+    line-height: 48px;
+    color: #000000;
+    font-size: 34px;
+    font-weight: 500;
+  }
+  .box .block {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 121px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 32px;
+    border-color: rgba(151,151,151,0.20);
+    background-color: rgba(255,255,255,0.60);
+    width: 174px;
+    height: 64px;
+  }
+  .box .zuzhi {
+    width: 37px;
+    height: 13px;
+  }
+  .box .colorDiv {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-left: 23px;
+    background-color: rgba(0,0,0,0.20);
+    width: 1px;
+    height: 37px;
+  }
+  .box .addimages {
+    margin-top: 0px;
+    margin-left: 25px;
+    width: 34px;
+    height: 34px;
+  }
+  .box .bd {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding-right: 29px;
+    padding-left: 36px;
+    width: 750px;
+    height: 204px;
+  }
+  .box .group_2 {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 108px;
+  }
+  .box .group {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 108px;
+    background-color: #eef0f2;
+    width: 108px;
+    height: 108px;
+    overflow: hidden;
+  }
+  .box .color_2 {
+    margin-top: 24px;
+    border-radius: 36px;
+    background-color: #d0d2d7;
+    background-image: linear-gradient(-53deg, #C2C6CA 0%, #DEDFE4 99%);
+    width: 36px;
+    height: 36px;
+  }
+  .box .largeIcon {
+    margin-top: 4px;
+    width: 76px;
+    height: 44px;
+  }
+  .box .title {
+    margin-left: 20px;
+    line-height: 45px;
+    color: #333333;
+    font-size: 32px;
+    font-weight: 400;
+  }
+  .box .tagWrap {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgba(254,90,76,0.8);
+    padding-right: 22px;
+    padding-left: 21px;
+    height: 54px;
+  }
+  .box .tag {
+    line-height: 28px;
+    color: #fe5a4c;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .box .main {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 18px;
+    background-color: #ffffff;
+    padding-right: 29px;
+    padding-left: 30px;
+    width: 750px;
+    height: 102px;
+  }
+  .box .activityRegistration {
+    width: 120px;
+    height: 34px;
+    line-height: 34px;
+    color: #333333;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .box .moreCopyWrap {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+  }
+  .box .moreCopy {
+    margin-top: 4px;
+    width: 12px;
+    height: 24px;
+  }
+  .box .row {
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 18px;
+    background-color: #ffffff;
+    padding-right: 29px;
+    padding-left: 30px;
+    width: 750px;
+    height: 102px;
+  }
+  .box .shopTitle_2 {
+    width: 120px;
+    height: 34px;
+    line-height: 34px;
+    color: #333333;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .box .moreCopyWrap_2 {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+  }
+  .box .moreCopy_2 {
+    margin-top: 4px;
+    width: 12px;
+    height: 24px;
+  }
+  .box .row1 {
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding-right: 29px;
+    padding-left: 30px;
+    width: 750px;
+    height: 102px;
+  }
+  .box .helpFeedback {
+    width: 150px;
+    height: 34px;
+    line-height: 34px;
+    color: #333333;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .box .moreCopyWrap_3 {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+  }
+  .box .moreCopy_3 {
+    margin-top: 4px;
+    width: 12px;
+    height: 24px;
+  }
+  .box .empty {
+    position: absolute;
+    top: 619px;
+    left: 30px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgba(236, 236, 236, 1.00);
+    width: 720px;
+    height: 2px;
+  }
+  .box .row2 {
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding-right: 29px;
+    padding-left: 30px;
+    width: 750px;
+    height: 102px;
+  }
+  .box .shopTitle_3 {
+    width: 150px;
+    height: 34px;
+    line-height: 34px;
+    color: #333333;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .box .moreCopyWrap_4 {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+  }
+  .box .moreCopy_4 {
+    margin-top: 4px;
+    width: 12px;
+    height: 24px;
+  }
+  .box .div {
+    position: absolute;
+    top: 721px;
+    left: 30px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgba(236, 236, 236, 1.00);
+    width: 720px;
+    height: 2px;
+  }
+  .box .ft {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 18px;
+    background-color: #ffffff;
+    padding-right: 29px;
+    padding-left: 30px;
+    width: 750px;
+    height: 102px;
+  }
+  .box .title_2 {
+    width: 270px;
+    height: 34px;
+    line-height: 34px;
+    color: #333333;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .box .moreCopyWrap_5 {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+  }
+  .box .moreCopy_5 {
+    margin-top: 4px;
+    width: 12px;
+    height: 24px;
+  }
