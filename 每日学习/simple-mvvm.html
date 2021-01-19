@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <p>请输入:</p>
+    <input type="text" id="input">
+    <p id="p"></p>
+  </div>
+  <script>
+    let obj = {
+      text : '请输入'
+    }
+    Object.defineProperty(obj, 'text', {
+      set(newVal){
+        console.log('set text', newVal)
+        document.getElementById('input').value = newVal;
+        document.getElementById('p').innerHTML = newVal;
+      },
+      get(){
+        console.log('get text')
+      }
+    })
+    document.addEventListener('keyup', function(e){
+      obj.text = e.target.value
+    })
+  </script>
+</body>
+</html>
