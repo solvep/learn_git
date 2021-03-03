@@ -65,6 +65,7 @@ var __webpack_exports__ = {};
 
 var _components = __webpack_require__(1);
 
+// import './index.css'
 document.body.appendChild((0, _components.Button)());
 document.body.appendChild((0, _components.Link)());
 })();
